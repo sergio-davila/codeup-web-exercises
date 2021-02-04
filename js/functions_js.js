@@ -1,3 +1,5 @@
+"use strict";
+
 console.log("Welcome to my functions exercise!");
 
 function sayHello(name) {
