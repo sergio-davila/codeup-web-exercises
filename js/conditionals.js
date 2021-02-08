@@ -78,10 +78,3 @@ if(isNaN(promptNum) === false) {
 } else if(isNaN(promptNum) === true) {
     alert("That ain't a number FOOL.")
 }
-
-console.log(typeof "1234");
-
-var poop = 23
-if (poop !== 23) {
-    alert("thats not poop")
-}
