@@ -57,25 +57,31 @@ console.log(calculateTotal(4, 100));
 // var promptBill = prompt("What was your total bill?")
 // alert("Congrats!!! This your new price!: " + (calculateTotal(luckyNumber, promptBill).toFixed(2)));
 
-var yesOrNo = confirm("Would you like to put down a number?")
+var yesOrNo = confirm("Would you like to put down a number? ,':)")
 if (yesOrNo === false) {
     alert("Well you suck ass.")
 } else if(yesOrNo === true) {
-    var promptNum = parseInt(prompt("Put down a number, any number ;)"))
+    var promptNum = (prompt("Put down a number, any number ;)"))
 }
-if(typeof promptNum === "number") {
+if(isNaN(promptNum) === false) {
     alert("THAT IS A NUMBER, GOOD JOB YOU!" )
     alert("This is your number after adding 100 to it: " + (parseInt(promptNum) + 100))
     if(promptNum % 2 === 0) {
-        alert("Your number is even yoo!")
+        alert("Your number is even yoo! :D")
     } else if(promptNum % 2 !== 0) {
         alert("Your number is odd, like your face.")
     } if(Math.sign(parseInt(promptNum)) === 1) {
         alert("Your number is positive ;)")
-    } else if(Math.sign(parseInt(promptNum)) === -1){
-        alert("Your number IS NEGATIVE LAME-O. HAHAHAHA.")
+    } else if(Math.sign(parseInt(promptNum)) === -1) {
+        alert("Your number IS NEGATIVE, LAME-O. HAHAHAHA.")
     }
 } else if(isNaN(promptNum) === true) {
     alert("That ain't a number FOOL.")
 }
 
+console.log(typeof "1234");
+
+var poop = 23
+if (poop !== 23) {
+    alert("thats not poop")
+}
