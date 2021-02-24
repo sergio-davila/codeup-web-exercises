@@ -19,12 +19,12 @@ names.forEach(function(name) {
 
 function firstItem(array) {
     console.log(array[0]);
-};
+}
 firstItem(names);
 
 function secondItem(array) {
     console.log(array[1]);
-};
+}
 secondItem(names);
 
 function lastItem(array){
