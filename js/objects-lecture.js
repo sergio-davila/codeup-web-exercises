@@ -168,20 +168,20 @@ myCar2.turnOn = function () {
 
 //Let's tie some things together: Let's make a garage with another car!
 
-// sigotherCar = {
-//     make: "Honda",
-//     model: "Fit",
-//     year: 2010,
-//     owner: {
-//         firstName: "Au.",
-//         lastName: "Ga."
-//     },
-//     turnOn: function () {
-//         alert("Putting the key in the ignition - fired up the " + this.make + " " + this.model + " just fine!")
-//     }
-// }
-//
-// console.log(sigotherCar);
+sigotherCar = {
+    make: "Honda",
+    model: "Fit",
+    year: 2010,
+    owner: {
+        firstName: "Au.",
+        lastName: "Ga."
+    },
+    turnOn: function () {
+        alert("Putting the key in the ignition - fired up the " + this.make + " " + this.model + " just fine!")
+    }
+}
+
+console.log(sigotherCar);
 
 
 //Now: loop through an ARRAY of OBJECTS, accessing our turnOn function for our vehicles
