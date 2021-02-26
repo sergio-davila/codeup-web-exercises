@@ -112,7 +112,7 @@
      *      ...
      */
 
-    books.forEach(function(book, index) {
+    books.forEach(function(book) {
         console.log("Book # " + (books.indexOf(book) + 1) + "\n Title: " + book.title + "\n Author: " + book.author.firstName + " " + book.author.lastName + "\n ---")
     })
 
@@ -137,20 +137,19 @@
     // }
 
         function createBook(title, authorFirst, authorLast) {
-            var newBook = {
+        return {
                 title: title,
                 author: {
                     authorFirst,
                     authorLast
                 }
-            }
-            return newBook;
+            };
     }
     console.log(createBook("unga bunga", "Alex", "Davila"))
 
     var books2 = [
         createBook("The Giver", "Lois", "Lowry"),
-        createBook("The oooop", "Joe", "Deer"),
+        createBook("The big whoooop", "Joe", "Deer"),
         createBook("Hello there bro", "Jane", "Deerey")
     ]
 
