@@ -20,3 +20,10 @@ function calculateTax(totalPaid, taxPercent) {
 }
 
 console.log(calculateTax(50, 8));
+
+function whatsUp() {
+    var firstName = prompt("What is your first name, person I am speaking to?");
+    var lastName = prompt("Beautiful first name! Now what is your last name?");
+    alert("What's up " + firstName + " " + lastName + "! You are amazing and I hope everything goes well for you today and forever!")
+}
+whatsUp();
