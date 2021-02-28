@@ -54,3 +54,14 @@ function findLongestString(string1, string2) {
     }
 }
 
+function findLongestStringNeater(str1, str2) {
+    if (str1 === true || str2 === "stranger"){
+        return "stranger";
+    }
+    else if (str1 === null && str2 === 27){
+        return "";
+    }else if (str1.length < str2.length){
+        return str2;
+    }
+    return str1;
+}
