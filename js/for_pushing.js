@@ -38,3 +38,19 @@ function isFactor(num1, num2){
     return false;
 }
 
+function findLongestString(string1, string2) {
+    if (typeof string1 === "string" || typeof string2 === "string") {
+        if (typeof string1 === "string" && typeof string2 !== "string") {
+            return string1;
+        } else if (typeof string1 !== "string" && typeof string2 === "string"){
+            return string2;
+        }else if (string1.length > string2.length) {
+            return string1;
+        } else if (string2.length > string1.length) {
+            return string2;
+        }
+    } else if (typeof string1 !== "string" && typeof string2 !== "string"){
+        return "";
+    }
+}
+
