@@ -27,3 +27,14 @@ function whatsUp() {
     alert("What's up " + firstName + " " + lastName + "! You are amazing and I hope everything goes well for you today and forever!")
 }
 whatsUp();
+
+function isFactor(num1, num2){
+    if (num1 === true || num1 === 0 || num1 === null){
+        return false;
+    }
+    else if ((num2 % num1 === 0)){
+        return true;
+    }
+    return false;
+}
+
