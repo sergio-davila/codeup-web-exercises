@@ -87,3 +87,13 @@ function countVowels(x) {
         }
     } return letterCount;
 }
+
+function removeVowels(string) {
+    var newString = "";
+    for (var i = 0; i < string.length; i++) {
+        if (!isVowel(string[i])) {
+            newString += string[i]
+        }
+    }
+    return newString;
+}
