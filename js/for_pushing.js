@@ -65,3 +65,16 @@ function findLongestStringNeater(str1, str2) {
     }
     return str1;
 }
+
+function isVowel(x) {
+    return x === "a" ||
+        x === "e" ||
+        x === "i" ||
+        x === "o" ||
+        x === "u" ||
+        x === "A" ||
+        x === "E" ||
+        x === "I" ||
+        x === "O" ||
+        x === "U";
+}
