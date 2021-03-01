@@ -9,7 +9,7 @@
             // TODO: complete this method
             // hint: area = pi * radius^2
 
-            return Math.PI * (this.radius * 2); // TODO: return the proper value
+            return Math.PI * (this.radius * this.radius); // TODO: return the proper value
         },
 
         logInfo: function (doRounding) {
@@ -32,7 +32,7 @@
 
     console.log("=======================================================");
     // TODO: Change the radius of the circle to 5.
-
+    circle.radius = 5
     // log info about the circle
     console.log("Raw circle information");
     circle.logInfo(false);
