@@ -78,3 +78,12 @@ function isVowel(x) {
         x === "O" ||
         x === "U";
 }
+
+function countVowels(x) {
+    var letterCount = 0;
+    for (var i = 0; i < x.length; i++) {
+        if (isVowel(x[i])) {
+            letterCount++;
+        }
+    } return letterCount;
+}
