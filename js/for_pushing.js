@@ -104,3 +104,11 @@ console.log(removeVowels("Hello Bitema"));
 function firstAndSecond(x) {
     return [x[0], x[1]]
 }
+
+function sumAll (arr) {
+var count = 0;
+arr.forEach(function(num) {
+count += num
+});
+return count;
+}
