@@ -112,3 +112,10 @@ count += num
 });
 return count;
 }
+
+// VERY IMPORTANT!!!! DOUGLAS'S CODE ON HOW TO GET A NUMBER EVEN WITH NUMERIC STRINGS VVVVV
+function isANumber(x) {
+    return !isNaN(parseFloat(x));
+}
+
+console.log(isANumber("seven"));
