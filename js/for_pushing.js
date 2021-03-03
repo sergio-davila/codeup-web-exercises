@@ -98,7 +98,7 @@ function removeVowels(string) {
     return newString;
 }
 
-console.log(removeVowels("Hello Bitema"));
+console.log(removeVowels("Hello Ritema"));
 
 // Good example of how to create an array vvv
 function firstAndSecond(x) {
