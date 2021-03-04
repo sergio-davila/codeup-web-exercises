@@ -5,9 +5,59 @@
   <title>Forms lecture</title>
 </head>
     <body>
-    <input id="ZipCode" type="number" name="Zip Code" placeholder="Enter zip code">
-    <label for="ZipCode"></label>
 
+    <form action="https://request-inspector.glitch.me/">
+        <label>
+            Email
+        <input type="email" required name="email" placeholder="example@example.com">
+        </label>
+        <br>
+
+        <label for="zipCodeInput">Zip Code</label>
+        <input id="zipCodeInput" name="zipCode" type="number" placeholder="Enter zip code here">
+        <br>
+
+        <br>
+
+        <label>Password
+            <input type="password" name="userPassword" placeholder="Enter password here">
+        </label>
+
+
+        <input type="hidden" value="HiddenValue">
+        <br>
+
+        <textarea name="textArea" placeholder="Enter text here."></textarea>
+        <br>
+
+        <input type="checkbox" name="locatedInTX">Do you live in Texas?
+        <br>
+
+        <h2>POP QUIZ</h2>
+
+        A <input type="radio" name="quiz_question_1" value="a"><br>
+        B <input type="radio" name="quiz_question_1" value="b"><br>
+        C <input type="radio" name="quiz_question_1" value="c"><br>
+        D <input type="radio" name="quiz_question_1" value="d"><br>
+
+        <h2>POP QUIZ 2</h2>
+
+        A <input type="radio" name="quiz_question_1" value="a"><br>
+        B <input type="radio" name="quiz_question_2" value="b"><br>
+        C <input type="radio" name="quiz_question_3" value="c"><br>
+        D <input type="radio" name="quiz_question_4" value="d"><br>
+
+        <br>
+        <h2>What coffee do you like?</h2>
+        <select name="coffee_preference">
+            <option value="light">Light Roast</option>
+            <option value="dark">Dark Roast</option>
+            <option value="espresso">Espresso Blend</option>
+        </select>
+
+        <input type="submit">
+
+    </form>
 
     </body>
 </html>
