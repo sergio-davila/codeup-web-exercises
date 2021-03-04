@@ -5,57 +5,75 @@
     <title>Register With Us</title>
 </head>
 <body>
-    <form method="GET" action="https://request-inspector.glitch.me/">
+    <form method="POST" action="https://request-inspector.glitch.me/">
         <h1>Register with us!</h1>
 
         <br>
 
         <label>
-            Email
+            <b>Email</b>
             <input type="email" required name="email" placeholder="example@example.com">
         </label>
-
         <br>
 
-        <label>Password
+        <label>
+            <b>Password</b>
             <input type="password" name="userPassword" placeholder="Enter password here">
         </label>
-
+        <br>
         <br>
 
-        <label>Short Bio
-        <textarea name="bio" placeholder="Enter short description of yourself."></textarea>
+        <label>
+            <h2>Bio:</h2>
+        <textarea name="bio" cols="40" rows="15" placeholder="Tell us a little about yourself"></textarea>
         </label>
-
         <br>
 
         <h2>How did you hear about us?</h2>
-        <label>Billboard
+        <label>
             <input type="radio" name="hear_about_us1" value="Billboard">
-        </label>
-            <br>
-        <label>Radio Advertisement
+        Billboard </label>
+        <br>
+        <label>
             <input type="radio" name="hear_about_us2" value="Radio Advertisement">
-        </label>
-            <br>
-        <label>Internet Advertisement
+        Radio Advertisement </label>
+        <br>
+        <label>
             <input type="radio" name="hear_about_us3" value="Internet Advertisement">
-        </label>
-            <br>
-        <label>Other
-            <input type="radio" name="hear_about_us4" value="Other"><br>
-        </label>
+            Internet Advertisement </label>
+        <br>
+        <label>
+            <input type="radio" name="hear_about_us4" value="Other">
+        Other </label>
+        <br>
         <br>
 
-        <select name="web browser">
-            <option value="firefox">Light Roast</option>
-            <option value="chrome">Dark Roast</option>
-            <option value="microsoft edge">Espresso Blend</option>
-        </select>
+        <label> Choose your preferred Web Browser
+            <select name="web browser">
+                <option value="firefox">Firefox</option>
+                <option value="chrome">Chrome</option>
+                <option value="microsoft edge">Microsoft Edge</option>
+                <option disabled value="internet explorer">Internet Explorer</option>
+            </select>
+        </label>
+        <br>
+        <br>
 
-        <input type="submit" >
+        <input type="submit">
 
-
+    </form>
+    <form action="https://www.elformo.com/forms/4fb7674c-4bcb-4072-8f33-98a8e773b845" method="post" accept-charset="UTF-8">
+        <br>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="example@example.com"/>
+        <br>
+        <br>
+        <label for="comment">Leave comment here:</label>
+        <br>
+        <textarea id="comment" name="comment" placeholder="Like what it said above^"></textarea>
+        <br>
+        <br>
+        <input id="submit" name="submit" type="Submit" />
     </form>
 
 </body>
