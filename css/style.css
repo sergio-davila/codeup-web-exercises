@@ -7,7 +7,7 @@
 }
 
 h2 {
-    color: firebrick;
+    color: lightblue;
     text-decoration: underline;
 }
 
@@ -26,3 +26,6 @@ ul {
     list-style: armenian;
 }
 
+ol>.li {
+    text-decoration: bisque;
+}
