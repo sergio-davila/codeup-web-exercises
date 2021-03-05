@@ -1,6 +1,15 @@
 /* this is a style sheet for my welcome page - welcome.html */
 
 .fancy-header {
-    color: mediumpurple;
+    color: rebeccapurple;
     text-decoration: underline;
+}
+
+h2 {
+    color: firebrick;
+    text-decoration: underline;
+}
+
+body {
+    background-color: deepskyblue;
 }
