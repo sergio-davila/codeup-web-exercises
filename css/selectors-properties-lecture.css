@@ -5,3 +5,14 @@
 .comic {
     font-family: "Comic Sans MS"
 }
+
+
+
+
+p , h1 {
+    font-family: "Comic Sans MS";
+}
+
+body {
+    background-color: darkseagreen;
+}
