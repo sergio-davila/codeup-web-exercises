@@ -3,6 +3,7 @@
 .fancy-header {
     color: rebeccapurple;
     text-decoration: underline;
+    text-align: center;
 }
 
 h2 {
@@ -12,4 +13,16 @@ h2 {
 
 body {
     background-color: deepskyblue;
+    background-image: url("https://images.unsplash.com/photo-1483347756197-71ef80e95f73?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8bm9ydGhlcm4lMjBsaWdodHN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80");
+    background-size: inherit;
+    font-family: AppleGothic, serif;
 }
+
+ol {
+    list-style: upper-roman;
+}
+
+ul {
+    list-style: armenian;
+}
+
