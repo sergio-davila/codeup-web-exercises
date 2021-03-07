@@ -16,6 +16,7 @@ body {
     background-image: url("https://images.unsplash.com/photo-1483347756197-71ef80e95f73?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8bm9ydGhlcm4lMjBsaWdodHN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80");
     background-size: inherit;
     font-family: AppleGothic, serif;
+    color: navajowhite;
 }
 
 ol {
@@ -30,6 +31,11 @@ ol>.li {
     text-decoration: bisque;
 }
 
-table>.tr {
-    text-decoration: deepskyblue;
+table {
+    color: bisque;
+    text-decoration: underline;
+}
+
+em {
+    color: lightseagreen;
 }
