@@ -29,3 +29,7 @@ ul {
 ol>.li {
     text-decoration: bisque;
 }
+
+table>.tr {
+    text-decoration: deepskyblue;
+}
