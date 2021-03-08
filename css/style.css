@@ -38,11 +38,11 @@ table {
 }
 
 em {
-    color: lightseagreen;
+    color: greenyellow;
 }
 
 .tabletop {
-    color: lightsalmon;
+    color: bisque;
 }
 
 .row1 {
@@ -55,4 +55,9 @@ em {
 
 .row3 {
     color: dodgerblue;
+}
+
+.bottomText {
+    color: lightpink;
+    text-align: center;
 }
