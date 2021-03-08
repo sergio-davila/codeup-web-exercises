@@ -37,7 +37,14 @@ ol>.li {
 
 table {
     color: bisque;
-    text-decoration: underline;
+    border: thin solid blanchedalmond;
+    border-collapse: collapse;
+    font-size: 1.2em;
+}
+
+th, td {
+    border: thin solid blanchedalmond;
+    padding: 7px;
 }
 
 em {
@@ -63,4 +70,16 @@ em {
 .bottomText {
     color: lightpink;
     text-align: center;
+}
+
+a:link {
+    color: navajowhite;
+}
+
+a:visited {
+    color: mediumpurple;
+}
+
+a:hover {
+    background: seagreen;
 }
