@@ -2,22 +2,23 @@ body, html {
     height: 100%;
     width: 100%;
     padding: 0;
-    margin: 1em;
+    margin: 0;
     font-family: Arial, Ubuntu, sans-serif;
     background-color: lightblue;
 }
 
 .message {
-    margin: 1em;
+    margin: 0.5em 1.5em;
     width: 40%;
     padding: .7em;
-    text-align: initial;
-    border-radius: 10px;
+    border-radius: 6px;
     border: 2px solid #454343;
 }
 
+/*use dropper tool to check specific color of things*/
+
 .message-info {
-    background-color: rgba(31,112,255,0.8);
+    background-color: rgba(31, 112, 255, 0.8);
     color: #191b98
 }
 
@@ -34,4 +35,10 @@ body, html {
 .message-error {
     background-color: #ce0f11;
     color: black;
+}
+
+
+/*storing it as a variable*/
+:root {
+    --darkBlue: #191b98;
 }
