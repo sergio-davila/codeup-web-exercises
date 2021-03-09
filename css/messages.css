@@ -27,12 +27,12 @@ body, html {
 }
 
 .message-warning {
-    background-color: yellow;
-    color: #6e6e00;
+    background-color: #dad913;
+    color: #5b5b00;
 }
 
 .message-error {
-    background-color: red;
-    color: #570102
+    background-color: #ce0f11;
+    color: black;
 }
 
