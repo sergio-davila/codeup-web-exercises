@@ -119,3 +119,12 @@ function isANumber(x) {
 }
 
 console.log(isANumber("seven"));
+
+function replace(input1, input2, input3) {
+    if(typeof input1 === "number" && typeof input2 === "number" && typeof input3 === "number" ) {
+        return input1.replace(input2, input3);
+    } else {
+        return false
+    }
+}
+
