@@ -119,17 +119,18 @@ a {
     width: 100%;
     padding: .5em;
     background-color: var(--light-bg);
-    border: 1px solid var(--separator-color);
+    border-bottom: 1px solid var(--separator-color);
     overflow: auto;
 }
 
 .media-image {
-    width: 50px;
+    max-width: 50px;
     margin-top: 1.33em;
+    float: left;
 }
 
 .media-body {
-    float: right;
+    float: left;
     width: calc(100% - 50px);
 }
 
