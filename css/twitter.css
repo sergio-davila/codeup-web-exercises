@@ -29,18 +29,18 @@ a {
     background: var(--light-bg);
     position: fixed;
     width: 100%;
-    z-index: 1000; /*Yes it works with a smaller value*/
+    z-index: 1000; /*Yes it works with a smaller value, starting at 1*/
 }
 .nav {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    display: inline-block;
 }
 
 .nav-item {
     padding: 1.5em;
     float: left;
+    display: inline-block;
 }
 
 .nav-link {
@@ -58,7 +58,7 @@ a {
 
 .profile-image {
     position: absolute;
-    top: 240px;
+    top: 250px;
 }
 
 .profile-form {
@@ -111,7 +111,7 @@ a {
 }
 
 .container {
-    margin: 2em;
+    margin: 2em 0 0 .5em;
 }
 
 .media {
@@ -135,6 +135,10 @@ a {
 
 .profile-items {
     list-style: none;
+    padding: 0;
+    /*position: absolute;*/
+    /*left: 0;*/
+    /*top: 460px;*/
 }
 
 .profile-entry {
