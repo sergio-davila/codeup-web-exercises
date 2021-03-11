@@ -128,3 +128,11 @@ function replace(input1, input2, input3) {
     }
 }
 
+// Different way to do it vvvv
+function replace2(input1, input2, input3) {
+    if(typeof input1 !== "number" && typeof input2 !== "number" && typeof input3 !== "number" ) {
+        return false;
+    } else {
+        return input1.replace(input2, input3);
+    }
+}
