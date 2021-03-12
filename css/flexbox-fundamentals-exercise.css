@@ -87,7 +87,8 @@ section:nth-of-type(3) {
 
 section:nth-of-type(3) h3 {
     /* enter needed declarations here */
-    flex-grow: 2;
+    flex-grow: 1;
+    align-self: center;
 }
 
 .orange-circle {
@@ -111,7 +112,8 @@ section:nth-of-type(3) h3 {
 }
 
 section:nth-of-type(5) {
-    justify-content: space-around;
+    flex-flow: wrap;
+    justify-content: space-evenly;
     /* enter needed declarations here */
 }
 
