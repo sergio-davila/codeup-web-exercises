@@ -126,7 +126,7 @@ section:nth-of-type(5) {
 section:nth-of-type(6) {
     background: coral;
     height: 14em;
-    flex-flow: wrap;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     /* enter needed declarations here */
