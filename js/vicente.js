@@ -7,7 +7,17 @@ function replaceString(x,y,z) {
 }
 
 var hey = "Hey Vicente, What's up?";
-console.log(hey);
-console.log(replaceString(hey,"Vicente", "Hope"));
+// console.log(hey);
+// console.log(replaceString(hey,"Vicente", "Hope"));
+
+function timesFour(input) {
+    if (typeof input === "number") {
+        return input * 4;
+    } else if(typeof input !== "number") {
+        return false;
+    }
+}
+
+
 
 // Showing my friend some javascript ^^^
