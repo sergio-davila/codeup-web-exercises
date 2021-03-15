@@ -136,3 +136,4 @@ function replace2(input1, input2, input3) {
         return input1.replace(input2, input3);
     }
 }
+
