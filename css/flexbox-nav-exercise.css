@@ -7,29 +7,38 @@ body {
 nav {
     background: #9f9f9f;
     height: 3em;
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    width: 100%;
     display: flex;
     align-items: center;
 }
-nav a {
+a {
     text-decoration: none;
     color: black;
     font-family: Work Sans, sans-serif;
-    margin: 0 .5em 0 .5em;
+    margin: 0 .3em 0 .3em;
+    display: inline-block;
+    padding: .9em;
 }
-nav a:hover {
-    background: black;
+a:hover {
+    background: lightgray;
 }
 
 .logo {
     font-size: 3em;
     font-family: Montserrat, serif;
-    padding: .2em 0 .2em 0;
-    margin-left: auto;
-    margin-right: auto;
+    padding: .1em 0 .2em 0;
     position: absolute;
+    left: 45vw;
+}
+
+.follow-us {
+    margin-left: auto;
 }
