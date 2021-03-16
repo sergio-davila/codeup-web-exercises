@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+nav {
+    background: #9f9f9f;
+    height: 3em;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+nav a {
+    text-decoration: none;
+    color: black;
+    font-family: Work Sans, sans-serif;
+    margin: 0 .5em 0 .5em;
+}
+nav a:hover {
+    background: black;
+}
+
+.logo {
+    font-size: 3em;
+    font-family: Montserrat, serif;
+    padding: .2em 0 .2em 0;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+}
