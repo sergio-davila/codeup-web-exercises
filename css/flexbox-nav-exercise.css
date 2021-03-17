@@ -6,7 +6,6 @@ body {
 }
 nav {
     background: #9f9f9f;
-    height: 3em;
     display: flex;
     align-items: center;
     position: relative;
@@ -23,22 +22,19 @@ a {
     text-decoration: none;
     color: black;
     font-family: Work Sans, sans-serif;
-    margin: 0 .3em 0 .3em;
     display: inline-block;
-    padding: .9em;
+    padding: .9em 1.1em .9em 1.1em;
 }
 a:hover {
     background: lightgray;
 }
-
 .logo {
     font-size: 3em;
     font-family: Montserrat, serif;
-    padding: .1em 0 .2em 0;
+    padding: .2em 0 .2em 0;
     position: absolute;
-    left: 45vw;
+    left: 43vw;
 }
-
 .follow-us {
     margin-left: auto;
 }
