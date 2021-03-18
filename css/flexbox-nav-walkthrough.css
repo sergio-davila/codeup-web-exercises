@@ -49,10 +49,6 @@ header nav .nav-bar-logo a{
     padding: .2em 0;
 }
 
-nav {
-    display: flex;
-}
-
 ul:not(.nav-bar-logo) {
     z-index: 100;
 }
@@ -62,7 +58,3 @@ p {
     top:6vw;
     left:50vw;
 }
-
-/*nav ul {*/
-/*    display: flex;*/
-/*}*/
