@@ -5,6 +5,78 @@
 body {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    width: calc(100% - 2em);
+    margin: 1em;
+    height: 100vh;
 }
 
+h1, h2, h3 {
+    padding: 0;
+}
+
+.alert-info {
+    width: 100%;
+    text-align: center;
+    background-color: lightcyan;
+    border: 1px solid #9f9f9f;
+    padding: 1em;
+}
+
+.alert-info a {
+    color: black;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 3em;
+    margin: .5em 0;
+    align-self: center;
+}
+
+nav {
+    width: 100%;
+}
+
+nav .nav-links {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+ul li {
+    margin: .4em 0;
+    padding: .5em;
+    background-color: #9f9f9f;
+}
+
+img {
+    display: inline-block;
+    width: 100%;
+}
+
+footer {
+    margin-top: auto;
+}
+
+@media screen and (min-width: 768px) {
+    .alert-info {
+        display: none;
+    }
+
+    h1 {
+        position: absolute;
+        left:.5em;
+    }
+
+    nav .nav-links {
+        flex-direction: row;
+        margin-left: auto;
+    }
+
+    ul li {
+        background-color: white;
+    }
+}
