@@ -11,6 +11,13 @@ body {
 
 .alert-info a {
     background-color: #93f6f6;
+    color: black;
+    /*width: 100%; not sure if it does anything, didnt make a difference*/
     text-decoration: none;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.5em;
+    border: 2px solid grey;
 }
+
