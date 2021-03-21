@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    margin: 1em;
+}
+
+.alert-info a {
+    background-color: #93f6f6;
+    text-decoration: none;
+
+}
