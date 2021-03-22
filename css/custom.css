@@ -1,0 +1,23 @@
+.jumbotron {
+    text-align: center;
+}
+
+h1 {
+    display: inline-block;
+    color: #5d5d5d;
+    background-color: rgba(190,184,184,0.64);
+    width: 100%;
+}
+
+#header-pizza {
+    margin: 0;
+    padding: 0;
+}
+
+.container #pizza-image {
+    background-image: url("../images/pizza.png");
+}
+
+.badge {
+    border-radius: 2rem;
+}
