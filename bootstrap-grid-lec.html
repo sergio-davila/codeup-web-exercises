@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>bootstrap grid</title>
+<!--    bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<!--    custom css below-->
+
+<link rel="stylesheet" href="css/bootstrap-grid-lec.css">
+</head>
+<body>
+
+    <h3 class="text-center mt-3">Setting up our first container w/ empty rows</h3>
+    <div class="container">
+
+        <div class="row">
+
+        </div>
+
+        <div class="row">
+
+        </div>
+    </div>
+
+    <h3 class="text-center mt-3">Let's set up our first few interior columns(auto)</h3>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col">One of three</div>
+            <div class="col">Two of three</div>
+            <div class="col">Three of three</div>
+        </div>
+
+        <div class="row">
+            <div class="col">One of one</div>
+        </div>
+    </div>
+
+<!-- Okay: looks cool, but what about specificity> -->
+
+    <h3 class="text-center mt-3">Alright: More specific columns</h3>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-3">One of two</div>
+            <div class="col-9">Two of two</div>
+        </div>
+
+        <div class="row">
+            <div class="col">One of four</div>
+            <div class="col">Two of four</div>
+            <div class="col">Three of four</div>
+            <div class="col-6">Four of four</div>
+        </div>
+
+    </div>
+
+<!--Lets take a look at responsiveness!-->
+
+<h3 class="text-center mt-3">Specific columns - AND specific screen size settings!</h3>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 col-md-6 col-lg-8">One of two</div>
+            <div class="col-sm-8 col-md-6 col-lg-4">Two of two</div>
+        </div>
+
+        <div class="row">
+                <div class="col">One auto column</div>
+        </div>
+    </div>
+
+
+<!--What about not using all of the column space (all 12)?-->
+
+    <h3 class="text-center">Columns with some white space</h3>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-4">one of two</div>
+            <div class="col-4">two of two</div>
+        </div>
+
+        <div class="row">
+            <div class="col-8">Automatic column</div>
+        </div>
+    </div>
+
+<!--    What about other flex properties? -->
+
+    <h3 class="text-center">Flexing in different ways</h3>
+
+    <div class="container">
+        <div class="row tall-row justify-content-center align-items-center">
+            <div class="col-4">One of two</div>
+            <div class="col-4">Two of two</div>
+        </div>
+
+        <div class="row">
+            <div class="col">One of one</div>
+        </div>
+    </div>
+
+    <h3 class="text-center mt-3">Vertical Alignment</h3>
+
+    <div class="container">
+        <div class="row tall-row align-items-start">
+            <div class="col-4">One of three</div>
+            <div class="col-4">Two of three</div>
+            <div class="col-4">Three of three</div>
+        </div>
+        <div class="row">
+            <div class="col">One of one</div>
+        </div>
+    </div>
+
+    <h3 class="text-center">Using Offset to Push</h3>
+
+    <div class="container">
+        <div class="row tall-row align-items-center">
+            <div class="col-4">One of two</div>
+            <div class="col-4 offset-4">Two of two</div>
+        </div>
+        <div class="row">
+            <div class="col">One of one</div>
+        </div>
+    </div>
+
+    <h3 class="text-center">Using Order to specify a position</h3>
+
+    <div class="container mb-4">
+        <div class="row tall-row align-items-center justify-content-between">
+            <div class="col-4 order-last">one of two</div>
+            <div class="col-4 order">two of two</div>
+        </div>
+        <div class="row">
+            <div class="col">one of one</div>
+        </div>
+    </div>
+
+<!--Bootstrap JS-->
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+<!--custom js below-->
+
+
+</body>
+</html>
