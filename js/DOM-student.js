@@ -82,11 +82,11 @@ var mainContent = document.getElementsByClassName("main-content");
 mainContent[0].style.color = "darkblue";
 
 var topHeader = document.getElementById("top-header");
-topHeader[0].style.textDecoration = "underline"
-// need to work on this
+console.log(topHeader);
+topHeader.style.color = "lightblue"
+
 
 
 // TODO (BONUS): That default bootstrap font is nice, but we've been adding our own fonts to thing for a couple of weeks now! Add a font-family of some kind that you'd like it to adjust to.
 
-mainBody[0].style.fontFamily = "comicsans"
-// also need to work on this
+mainBody[0].style.fontFamily = "fantasy"
