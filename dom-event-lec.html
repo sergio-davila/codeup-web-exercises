@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Lecture Area</title>
+</head>
+<body>
+    <button id="btn1">Let's see an event</button>
+    <button id="btn2">Let's change some colors</button>
+    <button id="btn3">REMOVE EVENTS</button>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, assumenda consectetur hic incidunt labore mollitia officiis pariatur perferendis quas rem totam voluptate! Eaque, officia, voluptatem? Accusantium facere veritatis voluptatem! Provident.</p>
+
+<script>
+    var buttonOne = document.getElementById("btn1");
+
+    console.log(buttonOne);
+
+    var alertMe = function() {
+        //in this function, write down what you would want to happen when you click on the button!
+        alert("This button has been clicked!")
+    }
+
+    buttonOne.addEventListener("click", alertMe)
+
+    var buttontwo = document.getElementById("btn2");
+    var purpleparagraph = function () {
+        var paragraph = document.getElementsByTagName("p");
+        paragraph[0].style.backgroundColor = "rebeccapurple"
+    }
+    buttontwo.addEventListener("click", purpleparagraph)
+
+    var buttonthree = document.getElementById("btn3");
+    buttonthree.addEventListener("click", function() {
+
+        buttonOne.removeEventListener("click", alertMe)
+        buttontwo.removeEventListener("click", purpleparagraph);
+    })
+</script>
+</body>
+</html>
