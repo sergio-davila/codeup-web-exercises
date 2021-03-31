@@ -137,3 +137,9 @@ function replace2(input1, input2, input3) {
     }
 }
 
+function helloworld(name) {
+    var namePrompt = prompt("eyo please type in your name")
+    return alert("whats up " + namePrompt + ", hope you have a good day!")
+}
+
+helloworld("Alex");
