@@ -93,6 +93,17 @@ console.log(printRecipe(caldoRecipe));
 // convertAddressToObject('8626 Sunny Oaks') // {streetNumber: '8646', streetName: 'Sunny Oaks'}
 //  convertAddressToObject('5408 Villa Nueva') // {streetNumber: '5408', streetName: 'Villa Nueva'}
 
-// function convertAddressToObject(x) {
-//     for ()
-// }
+function convertAddressToObject(x) {
+    var addressNum = '';
+    var address = '';
+    var finalObject = {};
+    for (var i = 0; i < x.length; i++) {
+        if (x[i] === '0' || x[i] === '1' || x[i] === '2' || x[i] === '3' || x[i] === '4' || x[i] === '5' || x[i] === '6' || x[i] === '7' || x[i] === '8' || x[i] === '9') {
+            addressNum = addressNum + x[i];
+        } else {
+            address = address + x[i];
+        }
+    }
+}
+
+console.log(convertAddressToObject('8626 Sunny Oaks'));
