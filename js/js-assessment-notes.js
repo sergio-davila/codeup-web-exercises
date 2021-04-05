@@ -111,3 +111,13 @@ function convertAddressToObject(x) {
 }
 
 console.log(convertAddressToObject('8626 Sunny Oaks'));
+
+
+// Roland's version
+function convertAddressToObjectRoland(string) {
+    var array = string.split(" ");
+    var address = {};
+    address.streetNumber = array[0];
+    address.streetName = array[1] + " " + array[2];
+    return address;
+}
