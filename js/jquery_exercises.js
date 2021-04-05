@@ -3,11 +3,24 @@ $(document).ready(function () {
 
     // ID selectors below
 
-
+    // alert($('#text-top').html());
+    alert($('#uno').html());
 
     // Class selectors below
+    $('.codeup').css({'border':'1px solid red'});
 
     // Element selectors(exercise) below
+    $('li').css({'font-size':'20px', 'color':'green'});
+
+    $('h1').css({'color':'red'});
+
+    alert($('h1').html());
+
+    $('p').css({'color':'blue'});
+
+    // Multiple Selectors below
+
+    $('h1, p, li').css({'backgroundColor':'yellow'})
 
 
     // Element selectors examples below vvv
