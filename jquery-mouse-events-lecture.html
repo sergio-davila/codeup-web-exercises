@@ -151,7 +151,9 @@
 
         function hovering(e) {
             console.log(e);
-            $(e.target).html($(e.target.toUpperCase()));
+            var value = $(e.target).html();
+            console.log(value);
+            $(e.target).html(value.toUpperCase());
         }
 
         $('h3').hover(hovering);
