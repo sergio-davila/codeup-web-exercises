@@ -17,15 +17,14 @@
         cheatCode = cheatCode + event.key;
         console.log(cheatCode);
 
-        // if (!answer.toLowerCase().includes(cheatCode)) {
-        //     cheatCode = ''
-        // }
+        if (!answer.toLowerCase().includes(cheatCode.toLowerCase())) {
+            cheatCode = ''
+        }
 
         if (cheatCode.toLowerCase().includes(answer.toLowerCase())) {
             $('body').css('backgroundColor', 'purple')
             $(document).off();
         }
-
     });
 
 
