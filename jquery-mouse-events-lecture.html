@@ -135,8 +135,6 @@
             $(e.target).hide()
         }
 
-
-
         $('.box').dblclick(disappear);
 
         //- clicking on a paragraph will change the text to 'Howdy!'
@@ -145,7 +143,9 @@
             $(e.target).html('Howdy!');
         }
 
-        $('p').click(changeText);
+        $('p').click(function (e) {
+
+        });
 
         //- hovering over the sub header makes the letters turn to uppercase while hovering over
 
@@ -156,7 +156,10 @@
             $(e.target).html(value.toUpperCase());
         }
 
-        $('h3').hover(hovering);
+        $('h3').hover(hovering, function() {
+            var value = $(this).html();
+            $(this).html(value.toLowerCase());
+        });
     });
 
 </script>

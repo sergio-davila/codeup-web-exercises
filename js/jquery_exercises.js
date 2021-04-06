@@ -1,8 +1,29 @@
 $(document).ready(function () {
     console.log("fully loaded and ready to go!")
 
+    //example with outside function
+    function h1Click(e) {
+        console.log(e);
+        $(e.target).css('background', 'limegreen');
+    }
 
+    $('h1').click(h1Click);
 
+    //example with inside function
+    $('p').dblclick(function(e) {
+        console.log(e);
+        $(e.target).css('font-size', '18px');
+    });
+
+    //example with multiple functions using BOTH outside and inside
+    function hovering(e) {
+        console.log(e);
+        $(e.target).css('color', 'red');
+    }
+
+    $('li').hover(hovering, function() {
+        $(this).css('color', 'black');
+    });
 
     //SELECTOR EXERCISE BELOW THIS POINT
     // ID selectors below
