@@ -23,6 +23,7 @@
 
         if (cheatCode.toLowerCase().includes(answer.toLowerCase())) {
             $('body').css('backgroundColor', 'purple')
+            alert('YOU HAVE ADDED 30 LIVES, CONGRATURATIONS! A WINNER IS YOU!');
             $(document).off();
         }
     });
