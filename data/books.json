@@ -1,5 +1,13 @@
 [
   {
+    "author": "Lois Lowry",
+    "country": "United States",
+    "language": "English",
+    "pages": 179,
+    "title": "The Giver",
+    "year": 1993
+  },
+  {
     "author": "Chinua Achebe",
     "country": "Nigeria",
     "imageLink": "images/things-fall-apart.jpg",
@@ -1008,7 +1016,7 @@
     "title": "Harry Potter and the Sorcerer's Stone"
   },
   {
-    "author": "Traction",
-    "title": "The guy who wrote it"
+    "author": "The guy who wrote it",
+    "title": "Traction"
   }
 ]

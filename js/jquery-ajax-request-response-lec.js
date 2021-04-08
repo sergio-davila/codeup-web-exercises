@@ -71,14 +71,14 @@ $(document).ready(function(){
 
     var swapiBaseURL = 'https://swapi.dev/api/';
 
-    $.ajax(swapiBaseURL + 'people/', {
-        method: "GET",
-        data: {
-            search: "r2"
-        }
-    }).done(function (data) {
-       console.log(data)
-    });
+    // $.ajax(swapiBaseURL + 'people/', {
+    //     method: "GET",
+    //     data: {
+    //         search: "r2"
+    //     }
+    // }).done(function (data) {
+    //    console.log(data)
+    // });
 
 
     /*
@@ -93,7 +93,7 @@ $(document).ready(function(){
     //     console.log(status);
     //     console.log(jqXHR);
     // }).always(function(){
-    //     console.log("getting films")
+    //     console.log("Getting films")
     // });
 
 
@@ -142,10 +142,20 @@ $(document).ready(function(){
      * "Something wrong with your request..." if it fails.
      */
 
+    // var swapiFilmRequest = $.ajax(swapiBaseURL + "films/");
+    //
+    // swapiFilmRequest.fail(function () {
+    //     console.log("Failed to load films.")
+    // });
+
     /*
      * TO DO: Refactor your Star Wars API request to log a message that says
      * "...loading" whether the request fails or not.
      */
+
+    // swapiFilmRequest.always(function() {
+    //     console.log("Loading Star Wars films...")
+    // });
 
 
     /*
@@ -156,21 +166,46 @@ $(document).ready(function(){
       * that displays the director of the film.
      */
 
+    var aNewHope = $.ajax(swapiBaseURL + "films/", {
+        method: "GET",
+        data: {
+            search: 'A New Hope'
+        }
+    });
 
-
+    aNewHope.done(function (data) {
+        console.log(data.results);
+    });
 
     /*
      * TO DO: Create a new variable that makes a similar request. Search for
      * "The Force Awakens" and console log its release date.
      */
 
+    var newHopeSwapiRequest = $.ajax(swapiBaseURL + 'films/1/');
 
+    newHopeSwapiRequest.done(function (data) {
+        console.log(data.director);
+    })
 
     /*
      * TO DO: Make a request to books.json. Return the author of "The
      * Canterbury Tales."
      */
 
+    var booksRequest = $.ajax("data/books.json");
+
+    console.log(booksRequest); //Its not our data.
+
+    booksRequest.done(function (data) {
+        console.log('At the bottom of the file', data);
+        data.forEach(function(book) {
+            //console.log(book);
+            if (book.title === "The Canterbury Tales"){
+                console.log("The author of Canterbury Tales is " + book.author);
+            }
+        });
+    });
 
 
     /*********************************************
@@ -205,11 +240,30 @@ $(document).ready(function(){
 
     // this variable stores our request
 
+    function generateBooks() {
+        // var booksRequest = $.ajax("data/books.json");
+
+        myBooks.done(function (data) {
+
+            $.each(data, function (index, book) {
+                var content = "";
+                content += "<h2>" + book.title + "</h2>"
+                content += "<h4>" + book.author + "</h4>"
+                //console.log(content);
+                $('#main').append(content);
+            });
+        });
+
+        myBooks.fail(function () {
+            $('#main').append("<h1>Error getting books! :'(</h1>")
+        })
+    }
+
 
 
     // call the function to generate data on page load
 
-
+    generateBooks();
 
     /*
      * TO DO: Add your favorite book to the end of books.json.
@@ -222,5 +276,10 @@ $(document).ready(function(){
 
     // event listener on refresh button
 
+    $('#refresh').click(function(e) {
+        console.log("refresh button was clicked.");
+        $('#main').html('');
+        generateBooks();
+    });
 
 });
