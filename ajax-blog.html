@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax Blog</title>
+</head>
+<body>
+<h1>Welcome to my blog!</h1>
+
+<div id="posts">
+
+</div>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script>
+    (function (){
+
+    var blogContents = $.get("data/blog.json");
+
+    // function blogContentsFunction(data) {
+    //     console.log(data)
+    // }
+    //
+    // blogContents.done(generateBlogContents);
+
+        function generateBlogContents() {
+            blogContents.done(function (data) {
+                console.log(data);
+
+                $.each(data, function (index, blog) {
+                    var contents = "";
+                    contents += "<h2>" + blog.title + "</h2>"
+                    contents += "<p>" + blog.content + "</p>"
+                    contents += "<h4>" + "Categories: " + blog.categories + "</h4>"
+                    contents += "<h5>" + "Date Posted: " + blog.date + "</h5>"
+
+                    $('#posts').append(contents);
+                });
+            });
+        }
+
+        generateBlogContents();
+
+
+
+
+    })();
+</script>
+
+</body>
+</html>
