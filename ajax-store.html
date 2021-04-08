@@ -7,6 +7,8 @@
 
 <h1>My Tool Store</h1>
 
+<button id="refresh">Refresh</button>
+<br>
 <table id="products">
     <thead>
         <tr>
@@ -46,7 +48,7 @@
 
             $.each(data, function (index, tool) {
                 var content = "";
-                content += "<h2>" + tool.title + tool.quantity + "</h2>"
+                content += "<h2>" + tool.title + "</h2>"
                 content += "<h4>" + tool.quantity + "</h4>"
                 content += "<h4>" + "$" + tool.price + "</h4>"
                 content += "<h4>" + tool.categories + "</h4>"
@@ -57,6 +59,13 @@
     }
 
     generateInventory();
+
+    $('#refresh').click(function(e) {
+        console.log("refresh button was clicked.");
+        $('#insertProducts').html('');
+        generateInventory();
+    });
+
 
 })();
 </script>
