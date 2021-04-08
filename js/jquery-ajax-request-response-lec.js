@@ -29,7 +29,7 @@ $(document).ready(function(){
      * endpoint, then query it for a username...
      */
     var hookbinUrl = 'https://hookb.in/6Jj0pKNG2DILbb031yx1';
-    console.log($.ajax(hookbinUrl));
+    // console.log($.ajax(hookbinUrl));
 
 
     /*
@@ -69,6 +69,16 @@ $(document).ready(function(){
      * API and get data back. Uncomment the line below.
      */
 
+    var swapiBaseURL = 'https://swapi.dev/api/';
+
+    $.ajax(swapiBaseURL + 'people/', {
+        method: "GET",
+        data: {
+            search: "r2"
+        }
+    }).done(function (data) {
+       console.log(data)
+    });
 
 
     /*
@@ -76,7 +86,15 @@ $(document).ready(function(){
      * return a list of all Star Wars films.
      */
 
-
+    $.ajax(swapiBaseURL + "films/").done(function (data){
+        console.log(data);
+    }).fail(function (jqXHR, status) {
+        console.log("failed to get film");
+        console.log(status);
+        console.log(jqXHR);
+    }).always(function(){
+        console.log("getting films")
+    });
 
 
     /*
@@ -87,7 +105,7 @@ $(document).ready(function(){
      * TO DO TOGETHER: Let's make a request to the books inventory we saved
       * previously.
      */
-    //var myBooks = ???
+    var myBooks = $.ajax("data/books.json");
 
     function onSuccess (data){
         console.log(data);
@@ -101,12 +119,14 @@ $(document).ready(function(){
         console.log("Looking for books...");
     }
 
+    myBooks.done(onSuccess);
 
     /*
      * TO DO TOGETHER: What if we want to display a message if this AJAX request
      * fails?
      */
 
+    myBooks.fail(onFail);
 
 
     /*
@@ -114,7 +134,7 @@ $(document).ready(function(){
      * fails or not?
      */
 
-
+    myBooks.always(onAlways);
 
     /*
      * TO DO: Refactor your Star Wars API request to log a message that says
