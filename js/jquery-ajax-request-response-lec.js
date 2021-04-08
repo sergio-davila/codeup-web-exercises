@@ -86,15 +86,15 @@ $(document).ready(function(){
      * return a list of all Star Wars films.
      */
 
-    $.ajax(swapiBaseURL + "films/").done(function (data){
-        console.log(data);
-    }).fail(function (jqXHR, status) {
-        console.log("failed to get film");
-        console.log(status);
-        console.log(jqXHR);
-    }).always(function(){
-        console.log("getting films")
-    });
+    // $.ajax(swapiBaseURL + "films/").done(function (data){
+    //     console.log(data);
+    // }).fail(function (jqXHR, status) {
+    //     console.log("failed to get film");
+    //     console.log(status);
+    //     console.log(jqXHR);
+    // }).always(function(){
+    //     console.log("getting films")
+    // });
 
 
     /*
@@ -109,6 +109,7 @@ $(document).ready(function(){
 
     function onSuccess (data){
         console.log(data);
+        console.log("IT WORKED!")
     }
 
     function onFail(jqXhr){
