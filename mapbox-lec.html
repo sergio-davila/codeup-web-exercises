@@ -3,8 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+<!--    Mapbox CDN below-->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+
 </head>
 <body>
 
+<div id='map' style='width: 400px; height: 300px;'></div>
+
+<script src="js/keys.js"></script>
+<script>
+    console.log(mapBoxToken);
+    mapboxgl.accessToken = mapBoxToken;
+    var map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        center: [-74.5, 40], // starting position [lng, lat]
+        zoom: 9 // starting zoom
+    });
+</script>
 </body>
 </html>
