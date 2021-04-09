@@ -3,8 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <title>jQuery FAQ</title>
+    <style>
+        .invisible {
+            visibility: hidden;
+        }
+
+    </style>
 </head>
 <body>
+<dl>
+    <dt>FAQ 1</dt>
+    <dd class="invisible">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque deleniti doloremque, inventore labore libero modi quam sint sunt veritatis voluptatum. Omnis, quis, vel! Cumque doloremque maxime quod similique totam voluptates.</dd>
 
+    <dt>FAQ 2</dt>
+    <dd class="invisible">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem deserunt, dolorum enim eum eveniet excepturi inventore laudantium neque nesciunt nisi nobis pariatur praesentium quis repudiandae sequi similique soluta? Eligendi, obcaecati?</dd>
+
+    <dt>FAQ 3</dt>
+    <dd class="invisible">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dicta esse eum exercitationem facilis impedit ipsa itaque iusto laboriosam laborum maiores maxime nulla numquam placeat quae, quisquam temporibus velit voluptas.</dd>
+
+    <dt>FAQ 4</dt>
+    <dd class="invisible">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab amet autem beatae culpa deleniti, deserunt doloremque doloribus, eligendi error esse fuga ipsa minima pariatur quasi sunt tempore ullam ut voluptatum.</dd>
+
+    <dt>FAQ 5</dt>
+    <dd class="invisible">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda blanditiis maiores nam perferendis quas soluta? Amet asperiores deserunt distinctio ea earum, est expedita fuga harum nam quisquam saepe sed.</dd>
+
+    <dt>FAQ 6</dt>
+    <dd class="invisible">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci aliquam, atque consequatur consequuntur illo in, nam nostrum odio officia omnis optio porro quos reiciendis saepe, sint suscipit vel vero?</dd>
+
+    <dt>FAQ 7</dt>
+    <dd class="invisible">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, accusantium amet architecto at corporis doloribus eligendi fugit inventore, iure labore laborum, minima non nulla obcaecati odio praesentium quo rem unde!</dd>
+
+    <dt>FAQ 8</dt>
+    <dd class="invisible">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur earum fugit incidunt iure repellat. A aliquam doloribus iste sapiente unde? Accusantium aliquid dignissimos iusto nam non quia quis, sunt velit?</dd>
+
+    <dt>FAQ 9</dt>
+    <dd class="invisible">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi atque ea excepturi id magni necessitatibus porro quas unde? Deserunt exercitationem quidem repudiandae! Asperiores pariatur provident quis sapiente temporibus ut veniam.</dd>
+
+    <dt>FAQ 10</dt>
+    <dd class="invisible">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci atque deleniti, eius error excepturi, exercitationem hic illum iure laboriosam laudantium maiores minima molestiae neque qui quisquam tenetur, voluptas voluptatem.</dd>
+
+</dl>
+
+<a href="#" id="click-here">Click this to make all the 'invisible' classes disappear and reappear!!</a>
+
+<!--<h3 id="national-parks-heading">National Parks</h3>-->
+<!--<ul id="national-parks">-->
+<!--    <li>Arches</li>-->
+<!--    <li>Badlands</li>-->
+<!--    <li>Carlsbad Caverns</li>-->
+<!--    <li>Denali</li>-->
+<!--    <li>Everglades</li>-->
+<!--</ul>-->
+<!--<h3 id="state-parks-heading">State Parks of Texas</h3>-->
+<!--<ul id="state-parks-texas">-->
+<!--    <li>Abilene</li>-->
+<!--    <li>Big Bend</li>-->
+<!--    <li>Choke Canyon</li>-->
+<!--    <li>Davis Mountains</li>-->
+<!--    <li>Enchanted Rock</li>-->
+<!--</ul>-->
+<!--<h3 id="city-parks-heading">City Parks</h3>-->
+<!--<ul id="city-parks-san-antonio">-->
+<!--    <li>Hardberger Park</li>-->
+<!--    <li>Eisenhower Park</li>-->
+<!--    <li>San Pedro Park</li>-->
+<!--    <li>Japanese Tea Gardens</li>-->
+<!--    <li>Brackenridge Park</li>-->
+<!--</ul>-->
+
+<!--javascript/jquery below -->
+<script src="https://code.jquery.com/jquery-2.2.4.js"
+        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+        crossorigin="anonymous"></script>
+<script>
+
+    $('.invisible').click(function(e) {
+        $(e.target).css('visibility', 'hidden')
+    });
+
+    $('.invisible').keydown(function(e) {
+        $(e.target).css('visibility', 'visible')
+    });
+
+    $('dt').click(function(e) {
+        console.log("highlighted!")
+        $(this).css('backgroundColor', 'yellow')
+    })
+
+    // $('.invisible').css('visibility', 'hidden');
+
+    $('#click-here').click(function(e) {
+        console.log("clicked");
+        $('dd').toggleClass('invisible');
+    });
+
+
+
+</script>
 </body>
 </html>
