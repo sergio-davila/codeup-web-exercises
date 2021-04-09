@@ -46,30 +46,29 @@
 
 <a href="#" id="click-here">Click this to make all the 'invisible' classes disappear and reappear!!</a>
 
-<!--<h3 id="national-parks-heading">National Parks</h3>-->
-<!--<ul id="national-parks">-->
-<!--    <li>Arches</li>-->
-<!--    <li>Badlands</li>-->
-<!--    <li>Carlsbad Caverns</li>-->
-<!--    <li>Denali</li>-->
-<!--    <li>Everglades</li>-->
-<!--</ul>-->
-<!--<h3 id="state-parks-heading">State Parks of Texas</h3>-->
-<!--<ul id="state-parks-texas">-->
-<!--    <li>Abilene</li>-->
-<!--    <li>Big Bend</li>-->
-<!--    <li>Choke Canyon</li>-->
-<!--    <li>Davis Mountains</li>-->
-<!--    <li>Enchanted Rock</li>-->
-<!--</ul>-->
-<!--<h3 id="city-parks-heading">City Parks</h3>-->
-<!--<ul id="city-parks-san-antonio">-->
-<!--    <li>Hardberger Park</li>-->
-<!--    <li>Eisenhower Park</li>-->
-<!--    <li>San Pedro Park</li>-->
-<!--    <li>Japanese Tea Gardens</li>-->
-<!--    <li>Brackenridge Park</li>-->
-<!--</ul>-->
+<h3 id="national-parks-heading">National Parks</h3>
+<ul id="national-parks">
+    <li class="list-item1">Arches</li>
+    <li class="list-item1">Badlands</li>
+    <li class="list-item1">Carlsbad Caverns</li>
+    <li class="list-item1">Denali</li>
+</ul>
+<h3 id="state-parks-heading">State Parks of Texas</h3>
+<ul id="state-parks-texas">
+    <li class="list-item2">Abilene</li>
+    <li class="list-item2">Big Bend</li>
+    <li class="list-item2">Choke Canyon</li>
+    <li class="list-item2">Davis Mountains</li>
+</ul>
+<h3 id="city-parks-heading">City Parks</h3>
+<ul id="city-parks-san-antonio">
+    <li class="list-item3">Hardberger Park</li>
+    <li class="list-item3">Eisenhower Park</li>
+    <li class="list-item3">San Pedro Park</li>
+    <li class="list-item3">Brackenridge Park</li>
+</ul>
+
+<button id="highlighter">CLICK ME!</button>
 
 <!--javascript/jquery below -->
 <script src="https://code.jquery.com/jquery-2.2.4.js"
@@ -77,6 +76,7 @@
         crossorigin="anonymous"></script>
 <script>
 
+    // attributes and css exercise below
     $('.invisible').click(function(e) {
         $(e.target).css('visibility', 'hidden')
     });
@@ -97,7 +97,30 @@
         $('dd').toggleClass('invisible');
     });
 
+    // traversing exercise below
 
+    $('#highlighter').click(function (e) {
+        console.log("clicked the highlighter button");
+        $('.list-item1').last().css('backgroundColor', 'yellow')
+        $('.list-item2').last().css('backgroundColor', 'yellow')
+        $('.list-item3').last().css('backgroundColor', 'yellow')
+    });
+
+    $('h3').click(function (e) {
+        $('ul').children().css("font-weight", "bold")
+    });
+
+    $('.list-item1').click(function (e) {
+        $('.list-item1').first().css("color", "blue")
+    });
+
+    $('.list-item2').click(function (e) {
+        $('.list-item2').first().css("color", "blue")
+    });
+
+    $('.list-item3').click(function (e) {
+        $('.list-item3').first().css("color", "blue")
+    });
 
 </script>
 </body>
