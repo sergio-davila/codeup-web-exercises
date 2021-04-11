@@ -6,11 +6,17 @@ mapboxgl.accessToken = mapBoxToken;
 var mapOptions = {
     container: "map",
     style: 'mapbox://styles/mapbox/outdoors-v11',
-    center: [-98.4861, 29.4252],
-    zoom: 9.5
+    center: [-99.47930, 27.58843],
+    zoom: 20
 }
 
 var marcoMap = new mapboxgl.Map(mapOptions);
+
+var parentsHome = new mapboxgl.Marker({color: "blue"}).setLngLat([-99.47930, 27.58843]).addTo(marcoMap);
+
+var papasPopup = new mapboxgl.Popup().setHTML("<p><b>Casa de padres</b>: <em>Esta muuuuy caliente! :(</em></p>");
+
+parentsHome.setPopup(papasPopup);
 
 var oliveGardenMarker = new mapboxgl.Marker({color: "green"}).setLngLat([-98.480534, 29.565984]).addTo(marcoMap);
 
