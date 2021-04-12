@@ -42,7 +42,7 @@ main section {
     padding: 1em;
 }
 
-/*card styling begins below*/
+/* Card styling begins below */
 
 h1, h2, h3 {
     padding: 0;
@@ -59,14 +59,15 @@ hr {
 .card {
     margin: .5em;
     border-radius: 2px;
-    background: papayawhip;
+    background: antiquewhite;
     width: 250px;
     height: 350px;
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* center on cross */
+    justify-content: space-evenly; /* space on main */
+
     border: 1px solid black;
-    justify-content: space-evenly; /*space on main axis*/
-    align-items: center; /*center on cross axis*/
 }
 img {
     border-radius: 120px;
@@ -81,20 +82,27 @@ i {
 }
 
 .icons {
-    /* the following declarations control the spacing between the social media icons */
     display: flex;
-    width:55%;
     justify-content: space-evenly;
+    width: 55%;
 }
 
 .icons i {
     font-size: 2.2em;
 }
 
+/* we need to:
+TODO: flex the container (.boundary)
+TODO: leave the direction as ROW
+TODO: flex-wrap: wrap
+TODO: . . . justify / align appropriately
+TODO: add the 'padding' look
+ */
+
 .boundary {
-    display: flex;
-    background-color: cornflowerblue;
+    background-color: cadetblue;
     height: 100vh;
+    display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
     border-top: 1px solid black;
@@ -102,6 +110,6 @@ i {
 }
 
 .padding-boundary {
+    background-color: #0d5353;
     padding: 0 7em 0 7em;
-    background-color: royalblue;
 }

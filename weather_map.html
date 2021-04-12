@@ -22,20 +22,32 @@
 <h1>Weather Map Project</h1>
 
 
-<h5>Tips</h5>
-<ul>
-    <li>Take time to plan out your approach for each part of the project</li>
-    <li>Commit along the way. Especially as you are starting new functionality</li>
-    <li>You may utilize the geocoder helper methods from the previous mapbox lesson</li>
-    <li>API Keys should be protected in your keys.js</li>
-    <li>Read the docs!</li>
-    <li>Get your project working, then focus on styling & refactoring</li>
-    <li>To add mapbox autocomplete search, you will need to include geocoder scripts from mapbox</li>
-</ul>
+<!--Going to try and make cards to display the 5 day forecast-->
+<h4>Current Weather for San Antonio</h4>
+<article class="card">
+    <section>
+    <h5>Current Temp. :</h5>
+    <p class="font-weight-bold" id="sa-temp"></p>
+    </section>
 
-<h1>Current Weather for San Antonio</h1>
-<p id="sa-weather"></p>
+    <section>
+    <h5>Feels like:</h5>
+    <p class="font-weight-bold" id="sa-feelslike"></p>
+    </section>
 
+    <section>
+    <h5>Minimum Temp. Today:</h5>
+    <p class="font-weight-bold" id="sa-temp-min"></p>
+    </section>
+    <section>
+    <h5>Maximum Temp. Today:</h5>
+    <p class="font-weight-bold" id="sa-temp-max"></p>
+    </section>
+    <section>
+    <h5>Humidity:</h5>
+    <p class="font-weight-bold" id="sa-humidity"></p>
+    </section>
+</article>
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -61,8 +73,12 @@
         }).done(function (results){
             var saWeather = results.main;
             console.log(saWeather)
-            $('#sa-weather').
-            });
+            $('#sa-temp').html(saWeather.temp + "°");
+            $('#sa-feelslike').html(saWeather.feels_like + "°");
+            $('#sa-temp-min').html(saWeather.temp_min + "°");
+            $('#sa-temp-max').html(saWeather.temp_max + "°");
+            $('#sa-humidity').html(saWeather.humidity + "%")
+        });
 
 
 
