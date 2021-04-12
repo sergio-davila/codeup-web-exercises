@@ -5,13 +5,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- Mapbox CDN -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <!-- Custom CSS -->
 
-    <title></title>
+    <title>Weather Map Project</title>
 </head>
 <body>
 
@@ -29,8 +33,8 @@
     <li>To add mapbox autocomplete search, you will need to include geocoder scripts from mapbox</li>
 </ul>
 
-
-
+<h1>Current Weather for San Antonio</h1>
+<p id="sa-weather"></p>
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -50,31 +54,15 @@
         "use strict";
 
 
-        // GET REQUEST to OpenWeatherMap using city parameter
-        // https://openweathermap.org/current
-
-        // $.get("https://api.openweathermap.org/data/2.5/weather", {
-        //     q:"San Antonio, US",
-        //     appid:OPEN_WEATHER_APPID,
-        //     units: "imperial"
-        // }).done(function (results){
-        //     console.log(results);
-        // });
-
-        // TODO: How can we get imperial units instead?
-
-        // I used units: "imperial in the object above^
-
-        // TODO: What are some additional ways we can get the weather from this API?
-
         $.get("https://api.openweathermap.org/data/2.5/weather", {
-            appid: OPEN_WEATHER_APPID,
-            lat: 29.423017,
-            lon: -98.48527,
+            q:"San Antonio, US",
+            appid:OPEN_WEATHER_APPID,
             units: "imperial"
-        }).done(function(results) {
-            console.log(results);
-        });
+        }).done(function (results){
+            var saWeather = results.main;
+            console.log(saWeather)
+            $('#sa-weather').
+            });
 
 
 
@@ -82,33 +70,9 @@
 
 
 
-
-
-
-
-
-
-        //TODO: How can we incorporate mapbox with this? How can we make it dynamic?
-
-        $.get("https://api.openweathermap.org/data/2.5/onecall", {
-            appid: OPEN_WEATHER_APPID,
-            lat: 29.423017,
-            lon: -98.48527,
-            units: "imperial",
-            exclude: "current,minutely,hourly,alerts"
-        }).done(function (results) {
-            console.log(results)
-        })
-
-        // TODO: Explore the docs... what endpoint can we use to get a forecast?
-
-        // TODO: What parameter can we include in order to get the daily forecast only
 
 
 
     });
 
-
 </script>
-</body>
-</html>
