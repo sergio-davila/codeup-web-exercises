@@ -25,31 +25,33 @@ parentsHome.setPopup(papasPopup);
 var restaurantArray = [{name: "Olive Garden", address: "13730 San Pedro Ave, San Antonio, TX 78232"}, {name: "Hopdoddy's", address: "1301 N Loop 1604 W #101, San Antonio, TX 78258"}, {name: "Whataburger", address: "11003 NW Military Hwy, San Antonio, TX 78231"}]
 
 restaurantArray.forEach(function(restaurant) {
-    geocode(restaurant.address, mapBoxToken).then()
-})
+    geocode(restaurant.address, mapBoxToken).then(function (results) {
+        new mapboxgl.Marker({color: "blue"}).addTo(marcoMap);
+    });
+});
 
 // Markers/popups of fave restaurants below
 
-//Olive Garden
-var oliveGardenMarker = new mapboxgl.Marker({color: "green"}).setLngLat([-98.480534, 29.565984]).addTo(marcoMap);
-
-var oGPopup = new mapboxgl.Popup().setHTML("<p><b>Olive Garden</b>: <em>Italian Food ROCKS!</em></p>");
-
-oliveGardenMarker.setPopup(oGPopup);
-
-//Hopdoddy's
-var hopDoddysMarker = new mapboxgl.Marker({color: "brown"}).setLngLat([-98.51219268866876 ,29.60937692133791]).addTo(marcoMap);
-
-var hPPopup = new mapboxgl.Popup().setHTML("<p><b>Hop Doddy's</b>: <em>My favorite burgers!</em></p>")
-
-hopDoddysMarker.setPopup(hPPopup);
-
-//Whataburger
-var whataburgerMarker = new mapboxgl.Marker({color: "orange"}).setLngLat([-98.5343967636326, 29.557535144987945]).addTo(marcoMap);
-
-var wBPopup = new mapboxgl.Popup().setHTML("<p><b>Whataburger</b>: <em>Ol' faithful!</em></p>")
-
-whataburgerMarker.setPopup(wBPopup);
+// //Olive Garden
+// var oliveGardenMarker = new mapboxgl.Marker({color: "green"}).setLngLat([-98.480534, 29.565984]).addTo(marcoMap);
+//
+// var oGPopup = new mapboxgl.Popup().setHTML("<p><b>Olive Garden</b>: <em>Italian Food ROCKS!</em></p>");
+//
+// oliveGardenMarker.setPopup(oGPopup);
+//
+// //Hopdoddy's
+// var hopDoddysMarker = new mapboxgl.Marker({color: "brown"}).setLngLat([-98.51219268866876 ,29.60937692133791]).addTo(marcoMap);
+//
+// var hPPopup = new mapboxgl.Popup().setHTML("<p><b>Hop Doddy's</b>: <em>My favorite burgers!</em></p>")
+//
+// hopDoddysMarker.setPopup(hPPopup);
+//
+// //Whataburger
+// var whataburgerMarker = new mapboxgl.Marker({color: "orange"}).setLngLat([-98.5343967636326, 29.557535144987945]).addTo(marcoMap);
+//
+// var wBPopup = new mapboxgl.Popup().setHTML("<p><b>Whataburger</b>: <em>Ol' faithful!</em></p>")
+//
+// whataburgerMarker.setPopup(wBPopup);
 
 // BONUS
 
