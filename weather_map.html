@@ -20,8 +20,11 @@
     <title>Weather Map Project</title>
 </head>
 <body>
+<nav>
+    <div>Weather App</div>
+    <div id="current-city"></div>
+</nav>
 
-<h1>Weather Map Project</h1>
 
 
 <!--Going to try and make cards to display the 5 day forecast-->
@@ -60,23 +63,29 @@
         </section>
     </article>
 
+    <article class="card">
+        <section>
+            <p id="date4"></p>
+            <p class="font-weight-bold" id="sa-temp4"></p>
+            <p class="font-weight-bold" id="description4"></p>
+            <p class="font-weight-bold" id="sa-humidity4"></p>
+            <p class="font-weight-bold" id="sa-wind4"></p>
+            <p class="font-weight-bold" id="sa-pressure4"></p>
+        </section>
+    </article>
+
+    <article class="card">
+        <section>
+            <p id="date5"></p>
+            <p class="font-weight-bold" id="sa-temp5"></p>
+            <p class="font-weight-bold" id="description5"></p>
+            <p class="font-weight-bold" id="sa-humidity5"></p>
+            <p class="font-weight-bold" id="sa-wind5"></p>
+            <p class="font-weight-bold" id="sa-pressure5"></p>
+        </section>
+    </article>
 
 </div>
-<!--    <section>-->
-<!--    <h5>Feels like:</h5>-->
-<!--    <p class="font-weight-bold" id="sa-feelslike"></p>-->
-<!--    </section>-->
-
-<!--    <section>-->
-<!--    <h5>Minimum Temp. Today:</h5>-->
-<!--    <p class="font-weight-bold" id="sa-temp-min"></p>-->
-<!--    </section>-->
-
-<!--    <section>-->
-<!--    <h5>Maximum Temp. Today:</h5>-->
-<!--    <p class="font-weight-bold" id="sa-temp-max"></p>-->
-<!--    </section>-->
-
 
 <div id='map' style='width: 100%; height: 600px;'></div>
 
@@ -120,24 +129,38 @@
         }).done(function (results) {
             console.log(results);
             //console.log(results.list[0].weather[0]);
+            // Current City
+            $('#current-city').html("Current City: " + results.city.name);
             // First card
-            $('#date1').html(results.list[0].dt_txt)
+            $('#date1').html(results.list[0].dt_txt);
             $('#sa-temp1').html(results.list[0].main.temp + "°F / " + results.list[0].main.temp + "°F");
             $('#description1').html("Description: " + results.list[0].weather[0].description);
             $('#sa-wind1').html("Wind: " + results.list[0].wind.speed);
             $('#sa-pressure1').html("Pressure: " + results.list[0].main.pressure);
             // Second card
-            $('#date2').html(results.list[1].dt_txt)
+            $('#date2').html(results.list[1].dt_txt);
             $('#sa-temp2').html(results.list[1].main.temp + "°F / " + results.list[1].main.temp + "°F");
             $('#description2').html("Description: " + results.list[1].weather[0].description);
             $('#sa-wind2').html("Wind: " + results.list[1].wind.speed);
             $('#sa-pressure2').html("Pressure: " + results.list[1].main.pressure);
             // Third card
-            $('#date3').html(results.list[2].dt_txt)
+            $('#date3').html(results.list[2].dt_txt);
             $('#sa-temp3').html(results.list[2].main.temp + "°F / " + results.list[2].main.temp + "°F");
             $('#description3').html("Description: " + results.list[2].weather[0].description);
             $('#sa-wind3').html("Wind: " + results.list[2].wind.speed);
             $('#sa-pressure3').html("Pressure: " + results.list[2].main.pressure);
+            // Fourth card
+            $('#date4').html(results.list[3].dt_txt);
+            $('#sa-temp4').html(results.list[3].main.temp + "°F / " + results.list[3].main.temp + "°F");
+            $('#description4').html("Description: " + results.list[3].weather[0].description);
+            $('#sa-wind4').html("Wind: " + results.list[3].wind.speed);
+            $('#sa-pressure4').html("Pressure: " + results.list[3].main.pressure);
+            // Fifth card
+            $('#date5').html(results.list[4].dt_txt);
+            $('#sa-temp5').html(results.list[4].main.temp + "°F / " + results.list[4].main.temp + "°F");
+            $('#description5').html("Description: " + results.list[4].weather[0].description);
+            $('#sa-wind5').html("Wind: " + results.list[4].wind.speed);
+            $('#sa-pressure5').html("Pressure: " + results.list[4].main.pressure);
         });
 
         // $.get("https://api.openweathermap.org/data/2.5/onecall", {
@@ -150,6 +173,10 @@
         //     console.log("one call");
         //     console.log(results)
         // });
+
+        $.get("http://openweathermap.org/img/w/[icon].png" , {
+
+        })
 
 
 
