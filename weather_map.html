@@ -14,6 +14,8 @@
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/weather_map.css">
+
 
     <title>Weather Map Project</title>
 </head>
@@ -23,31 +25,61 @@
 
 
 <!--Going to try and make cards to display the 5 day forecast-->
-<h4>Current Weather for San Antonio</h4>
-<article class="card">
-    <section>
-    <h5>Current Temp. :</h5>
-    <p class="font-weight-bold" id="sa-temp"></p>
-    </section>
+<h3>5 Day Forecast</h3>
+<div id="cards">
+    <article class="card">
+        <section>
+        <p id="date1"></p>
+        <p class="font-weight-bold" id="sa-temp1"></p>
+        <p class="font-weight-bold" id="description1"></p>
+        <p class="font-weight-bold" id="sa-humidity1"></p>
+        <p class="font-weight-bold" id="sa-wind1"></p>
+        <p class="font-weight-bold" id="sa-pressure1"></p>
+        </section>
+    </article>
 
-    <section>
-    <h5>Feels like:</h5>
-    <p class="font-weight-bold" id="sa-feelslike"></p>
-    </section>
+    <article class="card">
+        <section>
+        <p id="date2"></p>
+        <p class="font-weight-bold" id="sa-temp2"></p>
+        <p class="font-weight-bold" id="description2"></p>
+        <p class="font-weight-bold" id="sa-humidity2"></p>
+        <p class="font-weight-bold" id="sa-wind2"></p>
+        <p class="font-weight-bold" id="sa-pressure2"></p>
+        </section>
+    </article>
 
-    <section>
-    <h5>Minimum Temp. Today:</h5>
-    <p class="font-weight-bold" id="sa-temp-min"></p>
-    </section>
-    <section>
-    <h5>Maximum Temp. Today:</h5>
-    <p class="font-weight-bold" id="sa-temp-max"></p>
-    </section>
-    <section>
-    <h5>Humidity:</h5>
-    <p class="font-weight-bold" id="sa-humidity"></p>
-    </section>
-</article>
+    <article class="card">
+        <section>
+            <p id="date3"></p>
+            <p class="font-weight-bold" id="sa-temp3"></p>
+            <p class="font-weight-bold" id="description3"></p>
+            <p class="font-weight-bold" id="sa-humidity3"></p>
+            <p class="font-weight-bold" id="sa-wind3"></p>
+            <p class="font-weight-bold" id="sa-pressure3"></p>
+        </section>
+    </article>
+
+
+</div>
+<!--    <section>-->
+<!--    <h5>Feels like:</h5>-->
+<!--    <p class="font-weight-bold" id="sa-feelslike"></p>-->
+<!--    </section>-->
+
+<!--    <section>-->
+<!--    <h5>Minimum Temp. Today:</h5>-->
+<!--    <p class="font-weight-bold" id="sa-temp-min"></p>-->
+<!--    </section>-->
+
+<!--    <section>-->
+<!--    <h5>Maximum Temp. Today:</h5>-->
+<!--    <p class="font-weight-bold" id="sa-temp-max"></p>-->
+<!--    </section>-->
+
+
+<div id='map' style='width: 100%; height: 600px;'></div>
+
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -68,18 +100,69 @@
 
         $.get("https://api.openweathermap.org/data/2.5/weather", {
             q:"San Antonio, US",
-            appid:OPEN_WEATHER_APPID,
+            appid: OPEN_WEATHER_APPID,
             units: "imperial"
         }).done(function (results){
             var saWeather = results.main;
-            console.log(saWeather)
-            $('#sa-temp').html(saWeather.temp + "°");
-            $('#sa-feelslike').html(saWeather.feels_like + "°");
-            $('#sa-temp-min').html(saWeather.temp_min + "°");
-            $('#sa-temp-max').html(saWeather.temp_max + "°");
-            $('#sa-humidity').html(saWeather.humidity + "%")
+            //console.log(results);
+            //console.log(saWeather);
+            //$('#sa-temp1').html(saWeather.temp + "°F / " + saWeather.temp + "°F");
+            //$('#sa-feelslike').html(saWeather.feels_like + "°");
+            //$('#sa-temp-min').html(saWeather.temp_min + "°");
+            //$('#sa-temp-max').html(saWeather.temp_max + "°");
+            //$('#sa-humidity1').html("Humidity: " + saWeather.humidity + "%")
         });
 
+        $.get("https://api.openweathermap.org/data/2.5/forecast", {
+            q: "San Antonio, US",
+            appid: OPEN_WEATHER_APPID,
+            units: "imperial"
+        }).done(function (results) {
+            console.log(results);
+            //console.log(results.list[0].weather[0]);
+            // First card
+            $('#date1').html(results.list[0].dt_txt)
+            $('#sa-temp1').html(results.list[0].main.temp + "°F / " + results.list[0].main.temp + "°F");
+            $('#description1').html("Description: " + results.list[0].weather[0].description);
+            $('#sa-wind1').html("Wind: " + results.list[0].wind.speed);
+            $('#sa-pressure1').html("Pressure: " + results.list[0].main.pressure);
+            // Second card
+            $('#date2').html(results.list[1].dt_txt)
+            $('#sa-temp2').html(results.list[1].main.temp + "°F / " + results.list[1].main.temp + "°F");
+            $('#description2').html("Description: " + results.list[1].weather[0].description);
+            $('#sa-wind2').html("Wind: " + results.list[1].wind.speed);
+            $('#sa-pressure2').html("Pressure: " + results.list[1].main.pressure);
+            // Third card
+            $('#date3').html(results.list[2].dt_txt)
+            $('#sa-temp3').html(results.list[2].main.temp + "°F / " + results.list[2].main.temp + "°F");
+            $('#description3').html("Description: " + results.list[2].weather[0].description);
+            $('#sa-wind3').html("Wind: " + results.list[2].wind.speed);
+            $('#sa-pressure3').html("Pressure: " + results.list[2].main.pressure);
+        });
+
+        // $.get("https://api.openweathermap.org/data/2.5/onecall", {
+        //     appid: OPEN_WEATHER_APPID,
+        //     lat: 29.423017,
+        //     lon: -98.48527,
+        //     units: "imperial",
+        //     exclude: "current,minutely,hourly,alerts"
+        // }).done(function (results) {
+        //     console.log("one call");
+        //     console.log(results)
+        // });
+
+
+
+        mapboxgl.accessToken = mapBoxToken;
+
+        var mapOptions = {
+            container: "map",
+            style: 'mapbox://styles/mapbox/outdoors-v11',
+            center: [-98.4861, 29.4260],
+            zoom: 9.5
+        }
+
+        var marcoMap = new mapboxgl.Map(mapOptions);
 
 
 
