@@ -211,19 +211,37 @@
 
         var marcoMap = new mapboxgl.Map(mapOptions);
 
-        var marker = new mapboxgl.Marker({
-            draggable: true
-        })
-            .setLngLat([0, 0])
-            .addTo(marcoMap);
+        var marker = new mapboxgl.Marker({draggable: true}).setLngLat([-98.4861, 29.4260]).addTo(marcoMap); // Chaining works on multiple lines to help readability
 
         function onDragEnd() {
             var lngLat = marker.getLngLat();
-            coordinates.style.display = 'block';
-            coordinates.innerHTML = 'Longitude: ' + lngLat.lng + '<br />Latitude: ' + lngLat.lat;
+            console.log('Longitude: ' + lngLat.lng + ' Latitude: ' + lngLat.lat);
+            $.get("https://api.openweathermap.org/data/2.5/onecall", {
+                appid: OPEN_WEATHER_APPID,
+                lat: lngLat.lat,
+                lon: lngLat.lng,
+                units: "imperial",
+                exclude: "minutely,hourly,alerts"
+            }).done(function (results) {
+                console.log(results)
+                results.daily.forEach(function(day, index) {
+                    console.log(day);
+                    var date = (new Date(day.dt * 1000)).toDateString();
+                    $('#date' + (index + 1)).html(date);
+                    $('#sa-temp'  + (index + 1)).html(day.temp.min + "°F / " + day.temp.max + "°F");
+                    $('#sa-humidity' + (index + 1)).html("Humidity: " + day.humidity + "%");
+                    $('#description'  + (index + 1)).html("Description: " + day.weather[0].description);
+                    $('#sa-wind'  + (index + 1)).html("Wind: " + day.wind_speed + " mph");
+                    $('#sa-pressure' + (index + 1)).html("Pressure: " + day.pressure + " mb");
+                    var iconcode = day.weather[0].icon;
+                    var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+                    $('#wicon' + (index + 1)).attr('src', iconurl);
+                })
+            });
         }
 
         marker.on('dragend', onDragEnd);
+
 
 
 
