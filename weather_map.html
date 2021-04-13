@@ -28,66 +28,71 @@
 
 
 <!--Going to try and make cards to display the 5 day forecast-->
-<h3>5 Day Forecast</h3>
-<div id="cards">
-    <article class="card">
-        <section>
-        <p id="date1"></p>
-        <p class="font-weight-bold" id="sa-temp1"></p>
-        <p class="font-weight-bold" id="description1"></p>
-        <p class="font-weight-bold" id="sa-humidity1"></p>
-        <p class="font-weight-bold" id="sa-wind1"></p>
-        <p class="font-weight-bold" id="sa-pressure1"></p>
-        </section>
-    </article>
+<h2 class="mt-4 mb-4">5 Day Forecast</h2>
+<div class="card-deck " id="cards">
+    <div class="card">
+        <ul class="list-group list-group-flush list-unstyled">
+            <li class="list-group-item dates" id="date1"></li>
+            <li class="list-group-item font-weight-bold temps" id="sa-temp1"></li>
+            <li class="list-group-item icons" id="icon1"><img id="wicon1" src="" alt="Weather icon"></li>
+            <li class="list-group-item font-weight-bold" id="description1"></li>
+            <li class="list-group-item font-weight-bold" id="sa-humidity1"></li>
+            <li class="list-group-item font-weight-bold" id="sa-wind1"></li>
+            <li class="list-group-item font-weight-bold" id="sa-pressure1"></li>
+        </ul>
+    </div>
 
-    <article class="card">
-        <section>
-        <p id="date2"></p>
-        <p class="font-weight-bold" id="sa-temp2"></p>
-        <p class="font-weight-bold" id="description2"></p>
-        <p class="font-weight-bold" id="sa-humidity2"></p>
-        <p class="font-weight-bold" id="sa-wind2"></p>
-        <p class="font-weight-bold" id="sa-pressure2"></p>
-        </section>
-    </article>
+    <div class="card">
+        <ul class="list-group list-group-flush list-unstyled">
+            <li class="list-group-item dates" id="date2"></li>
+            <li class="list-group-item font-weight-bold temps" id="sa-temp2"></li>
+            <li class="list-group-item icons" id="icon2"><img id="wicon2" src="" alt="Weather icon"></li>
+            <li class="list-group-item font-weight-bold" id="description2"></li>
+            <li class="list-group-item font-weight-bold" id="sa-humidity2"></li>
+            <li class="list-group-item font-weight-bold" id="sa-wind2"></li>
+            <li class="list-group-item font-weight-bold" id="sa-pressure2"></li>
+        </ul>
+    </div>
 
-    <article class="card">
-        <section>
-            <p id="date3"></p>
-            <p class="font-weight-bold" id="sa-temp3"></p>
-            <p class="font-weight-bold" id="description3"></p>
-            <p class="font-weight-bold" id="sa-humidity3"></p>
-            <p class="font-weight-bold" id="sa-wind3"></p>
-            <p class="font-weight-bold" id="sa-pressure3"></p>
-        </section>
-    </article>
+    <div class="card">
+        <ul class="list-group list-group-flush list-unstyled">
+            <li class="list-group-item dates" id="date3"></li>
+            <li class="list-group-item font-weight-bold temps" id="sa-temp3"></li>
+            <li class="list-group-item icons" id="icon3"><img id="wicon3" src="" alt="Weather icon"></li>
+            <li class="list-group-item font-weight-bold" id="description3"></li>
+            <li class="list-group-item font-weight-bold" id="sa-humidity3"></li>
+            <li class="list-group-item font-weight-bold" id="sa-wind3"></li>
+            <li class="list-group-item font-weight-bold" id="sa-pressure3"></li>
+        </ul>
+    </div>
 
-    <article class="card">
-        <section>
-            <p id="date4"></p>
-            <p class="font-weight-bold" id="sa-temp4"></p>
-            <p class="font-weight-bold" id="description4"></p>
-            <p class="font-weight-bold" id="sa-humidity4"></p>
-            <p class="font-weight-bold" id="sa-wind4"></p>
-            <p class="font-weight-bold" id="sa-pressure4"></p>
-        </section>
-    </article>
+    <div class="card">
+        <ul class="list-group list-group-flush list-unstyled">
+            <li class="list-group-item dates" id="date4"></li>
+            <li class="list-group-item font-weight-bold temps" id="sa-temp4"></li>
+            <li class="list-group-item icons" id="icon4"><img id="wicon4" src="" alt="Weather icon"></li>
+            <li class="list-group-item font-weight-bold" id="description4"></li>
+            <li class="list-group-item font-weight-bold" id="sa-humidity4"></li>
+            <li class="list-group-item font-weight-bold" id="sa-wind4"></li>
+            <li class="list-group-item font-weight-bold" id="sa-pressure4"></li>
+        </ul>
+    </div>
 
-    <article class="card">
-        <section>
-            <p id="date5"></p>
-            <p class="font-weight-bold" id="sa-temp5"></p>
-            <p class="font-weight-bold" id="description5"></p>
-            <p class="font-weight-bold" id="sa-humidity5"></p>
-            <p class="font-weight-bold" id="sa-wind5"></p>
-            <p class="font-weight-bold" id="sa-pressure5"></p>
-        </section>
-    </article>
+    <div class="card">
+        <ul class="list-group list-group-flush list-unstyled">
+            <li class="list-group-item dates" id="date5"></li>
+            <li class="list-group-item font-weight-bold temps" id="sa-temp5"></li>
+            <li class="list-group-item icons" id="icon5"><img id="wicon5" src="" alt="Weather icon"></li>
+            <li class="list-group-item font-weight-bold" id="description5"></li>
+            <li class="list-group-item font-weight-bold" id="sa-humidity5"></li>
+            <li class="list-group-item font-weight-bold" id="sa-wind5"></li>
+            <li class="list-group-item font-weight-bold" id="sa-pressure5"></li>
+        </ul>
+    </div>
 
 </div>
 
-<div id='map' style='width: 100%; height: 600px;'></div>
+<div class="mt-4" id='map' style='width: 100%; height: 600px;'></div>
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -106,80 +111,95 @@
 
         "use strict";
 
+        // Started out with this below for same day weather
 
-        $.get("https://api.openweathermap.org/data/2.5/weather", {
-            q:"San Antonio, US",
-            appid: OPEN_WEATHER_APPID,
-            units: "imperial"
-        }).done(function (results){
-            var saWeather = results.main;
-            //console.log(results);
-            //console.log(saWeather);
-            //$('#sa-temp1').html(saWeather.temp + "°F / " + saWeather.temp + "°F");
-            //$('#sa-feelslike').html(saWeather.feels_like + "°");
-            //$('#sa-temp-min').html(saWeather.temp_min + "°");
-            //$('#sa-temp-max').html(saWeather.temp_max + "°");
-            //$('#sa-humidity1').html("Humidity: " + saWeather.humidity + "%")
-        });
-
-        $.get("https://api.openweathermap.org/data/2.5/forecast", {
-            q: "San Antonio, US",
-            appid: OPEN_WEATHER_APPID,
-            units: "imperial"
-        }).done(function (results) {
-            console.log(results);
-            //console.log(results.list[0].weather[0]);
-            // Current City
-            $('#current-city').html("Current City: " + results.city.name);
-            // First card
-            $('#date1').html(results.list[0].dt_txt);
-            $('#sa-temp1').html(results.list[0].main.temp + "°F / " + results.list[0].main.temp + "°F");
-            $('#description1').html("Description: " + results.list[0].weather[0].description);
-            $('#sa-wind1').html("Wind: " + results.list[0].wind.speed);
-            $('#sa-pressure1').html("Pressure: " + results.list[0].main.pressure);
-            // Second card
-            $('#date2').html(results.list[1].dt_txt);
-            $('#sa-temp2').html(results.list[1].main.temp + "°F / " + results.list[1].main.temp + "°F");
-            $('#description2').html("Description: " + results.list[1].weather[0].description);
-            $('#sa-wind2').html("Wind: " + results.list[1].wind.speed);
-            $('#sa-pressure2').html("Pressure: " + results.list[1].main.pressure);
-            // Third card
-            $('#date3').html(results.list[2].dt_txt);
-            $('#sa-temp3').html(results.list[2].main.temp + "°F / " + results.list[2].main.temp + "°F");
-            $('#description3').html("Description: " + results.list[2].weather[0].description);
-            $('#sa-wind3').html("Wind: " + results.list[2].wind.speed);
-            $('#sa-pressure3').html("Pressure: " + results.list[2].main.pressure);
-            // Fourth card
-            $('#date4').html(results.list[3].dt_txt);
-            $('#sa-temp4').html(results.list[3].main.temp + "°F / " + results.list[3].main.temp + "°F");
-            $('#description4').html("Description: " + results.list[3].weather[0].description);
-            $('#sa-wind4').html("Wind: " + results.list[3].wind.speed);
-            $('#sa-pressure4').html("Pressure: " + results.list[3].main.pressure);
-            // Fifth card
-            $('#date5').html(results.list[4].dt_txt);
-            $('#sa-temp5').html(results.list[4].main.temp + "°F / " + results.list[4].main.temp + "°F");
-            $('#description5').html("Description: " + results.list[4].weather[0].description);
-            $('#sa-wind5').html("Wind: " + results.list[4].wind.speed);
-            $('#sa-pressure5').html("Pressure: " + results.list[4].main.pressure);
-        });
-
-        // $.get("https://api.openweathermap.org/data/2.5/onecall", {
+        // $.get("https://api.openweathermap.org/data/2.5/weather", {
+        //     q:"San Antonio, US",
         //     appid: OPEN_WEATHER_APPID,
-        //     lat: 29.423017,
-        //     lon: -98.48527,
-        //     units: "imperial",
-        //     exclude: "current,minutely,hourly,alerts"
-        // }).done(function (results) {
-        //     console.log("one call");
-        //     console.log(results)
+        //     units: "imperial"
+        // }).done(function (results){
+        //     var saWeather = results.main;
+        //     //console.log(results);
+        //     //console.log(saWeather);
+        //     //$('#sa-temp1').html(saWeather.temp + "°F / " + saWeather.temp + "°F");
+        //     //$('#sa-feelslike').html(saWeather.feels_like + "°");
+        //     //$('#sa-temp-min').html(saWeather.temp_min + "°");
+        //     //$('#sa-temp-max').html(saWeather.temp_max + "°");
+        //     //$('#sa-humidity1').html("Humidity: " + saWeather.humidity + "%")
         // });
 
-        // $.get("http://openweathermap.org/img/w/[icon].png" , {
-        //
-        // })
+        // Got it working using the forecast api, but it was excessive and Douglas no likey
+
+        // $.get("https://api.openweathermap.org/data/2.5/forecast", {
+        //     q: "San Antonio, US",
+        //     appid: OPEN_WEATHER_APPID,
+        //     units: "imperial"
+        // }).done(function (results) {
+        //     console.log(results);
+        //     //console.log(results.list[0].weather[0]);
+        //     // Current City
+        //     $('#current-city').html("Current City: " + results.city.name);
+        //     // First card
+        //     $('#date1').html(results.list[0].dt_txt);
+        //     $('#sa-temp1').html(results.list[0].main.temp + "°F / " + results.list[0].main.temp + "°F");
+        //     $('#description1').html("Description: " + results.list[0].weather[0].description);
+        //     $('#sa-wind1').html("Wind: " + results.list[0].wind.speed);
+        //     $('#sa-pressure1').html("Pressure: " + results.list[0].main.pressure);
+        //     var iconcode = results.list[0].weather[0].icon;
+        //     var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+        //     $('#wicon1').attr('src', iconurl);
+        //     // Second card
+        //     $('#date2').html(results.list[1].dt_txt);
+        //     $('#sa-temp2').html(results.list[1].main.temp + "°F / " + results.list[1].main.temp + "°F");
+        //     $('#description2').html("Description: " + results.list[1].weather[0].description);
+        //     $('#sa-wind2').html("Wind: " + results.list[1].wind.speed);
+        //     $('#sa-pressure2').html("Pressure: " + results.list[1].main.pressure);
+        //     // Third card
+        //     $('#date3').html(results.list[2].dt_txt);
+        //     $('#sa-temp3').html(results.list[2].main.temp + "°F / " + results.list[2].main.temp + "°F");
+        //     $('#description3').html("Description: " + results.list[2].weather[0].description);
+        //     $('#sa-wind3').html("Wind: " + results.list[2].wind.speed);
+        //     $('#sa-pressure3').html("Pressure: " + results.list[2].main.pressure);
+        //     // Fourth card
+        //     $('#date4').html(results.list[3].dt_txt);
+        //     $('#sa-temp4').html(results.list[3].main.temp + "°F / " + results.list[3].main.temp + "°F");
+        //     $('#description4').html("Description: " + results.list[3].weather[0].description);
+        //     $('#sa-wind4').html("Wind: " + results.list[3].wind.speed);
+        //     $('#sa-pressure4').html("Pressure: " + results.list[3].main.pressure);
+        //     // Fifth card
+        //     $('#date5').html(results.list[4].dt_txt);
+        //     $('#sa-temp5').html(results.list[4].main.temp + "°F / " + results.list[4].main.temp + "°F");
+        //     $('#description5').html("Description: " + results.list[4].weather[0].description);
+        //     $('#sa-wind5').html("Wind: " + results.list[4].wind.speed);
+        //     $('#sa-pressure5').html("Pressure: " + results.list[4].main.pressure);
+        // });
 
 
+        // 5 day weather forecast for current city
+        $.get("https://api.openweathermap.org/data/2.5/onecall", {
+            appid: OPEN_WEATHER_APPID,
+            lat: 29.423017,
+            lon: -98.48527,
+            units: "imperial",
+            exclude: "minutely,hourly,alerts"
+        }).done(function (results) {
+            console.log(results)
+            results.daily.forEach(function(day, index) {
+                console.log(day);
+                    var date = (new Date(day.dt * 1000)).toDateString();
+                    $('#date' + (index + 1)).html(date);
+                    $('#sa-temp'  + (index + 1)).html(day.temp.min + "°F / " + day.temp.max + "°F");
+                    $('#sa-humidity' + (index + 1)).html("Humidity: " + day.humidity + "%");
+                    $('#description'  + (index + 1)).html("Description: " + day.weather[0].description);
+                    $('#sa-wind'  + (index + 1)).html("Wind: " + day.wind_speed + " mph");
+                    $('#sa-pressure' + (index + 1)).html("Pressure: " + day.pressure + " mb");
+                    var iconcode = day.weather[0].icon;
+                    var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+                    $('#wicon' + (index + 1)).attr('src', iconurl);
+            })
+        });
 
+        //Mapbox below
         mapboxgl.accessToken = mapBoxToken;
 
         var mapOptions = {
@@ -191,7 +211,19 @@
 
         var marcoMap = new mapboxgl.Map(mapOptions);
 
+        var marker = new mapboxgl.Marker({
+            draggable: true
+        })
+            .setLngLat([0, 0])
+            .addTo(marcoMap);
 
+        function onDragEnd() {
+            var lngLat = marker.getLngLat();
+            coordinates.style.display = 'block';
+            coordinates.innerHTML = 'Longitude: ' + lngLat.lng + '<br />Latitude: ' + lngLat.lat;
+        }
+
+        marker.on('dragend', onDragEnd);
 
 
 
