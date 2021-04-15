@@ -337,3 +337,5 @@ function helloCohort(greeting, cohort){
 
     return greeting + " " + cohort;
 }
+
+let helloCohort2 = (greeting = "Good Morning ", cohort = "Marco") => greeting + cohort;
