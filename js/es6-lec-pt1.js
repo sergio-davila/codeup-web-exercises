@@ -250,9 +250,9 @@ function sayHello(name){
 let sum = (a, b) => a + b
 
 
-console.log(sum(5, 3)); //8
-console.log(sum(5, 20)); //25
-console.log(sum(1, 9)); //10
+// console.log(sum(5, 3)); //8
+// console.log(sum(5, 20)); //25
+// console.log(sum(1, 9)); //10
 
 
 
@@ -280,7 +280,7 @@ let addOneB = (arg1) => {
 // remove curly braces (if only one statement)
 let addOneC = (arg1) => arg1 + 1;
 
-//remove parens if only 1 input
+//remove parens if only 1 input/parameter/argument
 const addOneD = arg1 => arg1 + 1;
 
 
@@ -306,20 +306,20 @@ const addOneD = arg1 => arg1 + 1;
 //TODO Together: Refactor the following using ES6
 
 // old way
-// function sayHello(name) {
-// 	if (typeof name === 'undefined') {
-// 		name = 'World';
-// 	}
-//
-// 	return 'Hello, ' + name + '!';
-// }
+function sayHello(name) {
+	if (typeof name === 'undefined') {
+		name = 'World';
+	}
 
+	return 'Hello, ' + name + '!';
+}
 
+let sayHello2 = (name = "World") => `Hello, ${name}!`;
 
+let sum2 = (a = 0, b = 0) => a + b;
 
-
-// console.log(sayHello2());; // "Hello, World!"
-// console.log(sayHello2('codeup'));; // "Hello, codeup!"
+console.log(sayHello2()); // "Hello, World!"
+console.log(sayHello2('codeup')); // "Hello, codeup!"
 
 
 
