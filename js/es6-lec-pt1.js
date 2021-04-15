@@ -339,3 +339,5 @@ function helloCohort(greeting, cohort){
 }
 
 let helloCohort2 = (greeting = "Good Morning ", cohort = "Marco") => greeting + cohort;
+
+console.log(helloCohort2());

@@ -5,10 +5,10 @@
 *****************************************************************/
 //TODO TOGETHER: Create a newDog object using shorthand syntax
 
-// let breed = "Mutt";
-// let age = 8;
-// let dogName = "Kewpie";
-// let isCute = true;
+let breed = "Mutt";
+let age = 8;
+let dogName = "Kewpie";
+let isCute = true;
 
 //old way
 // let oldDog = {
@@ -24,9 +24,15 @@
 
 // //new way
 
+let newDog = {
+    breed,
+    age,
+    dogName,
+    isCute
+}
 
 
-// console.log(newDog);
+//console.log(newDog);
 
 
 
@@ -40,7 +46,7 @@
 
 var personA = {
     name: 'codeup',
-    age: 4
+    age: 7
 };
 
 // // old way
