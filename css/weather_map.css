@@ -34,7 +34,7 @@ main {
     border-top: 1px solid black;
 }
 
-h2 {
+h1, h2 {
     text-align: center;
 }
 

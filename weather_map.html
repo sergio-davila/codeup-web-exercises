@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+
+
     <!-- Mapbox CDN -->
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
@@ -28,7 +30,8 @@
 
 
 <!--Going to try and make cards to display the 5 day forecast-->
-<h2 class="mt-4 mb-4">5 Day Forecast</h2>
+<h1 class="mt-4 mb-4">5 Day Forecast</h1>
+<h2 class="mb-4" id="city-displayed">San Antonio</h2>
 <label for="search-address"></label>
 <input type="text" id="search-address">
 <button type="submit" id="submit-search-address">Search Address</button>
@@ -109,7 +112,7 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
 <script src="js/keys.js"></script>
-
+<script src="js/mapbox-geocoder-utils1.js"></script>
 <script>
     $(document).ready(function () {
 
@@ -134,11 +137,15 @@
 
         // Got it working using the forecast api, but it was excessive and Douglas no likey
 
+
+
         // $.get("https://api.openweathermap.org/data/2.5/forecast", {
         //     q: "San Antonio, US",
         //     appid: OPEN_WEATHER_APPID,
         //     units: "imperial"
         // }).done(function (results) {
+        //
+        // })
         //     console.log(results);
         //     //console.log(results.list[0].weather[0]);
         //     // Current City
@@ -179,7 +186,7 @@
         // });
 
 
-        // 5 day weather forecast for current city
+        // 5 day weather forecast for current city initial display
         $.get("https://api.openweathermap.org/data/2.5/onecall", {
             appid: OPEN_WEATHER_APPID,
             lat: 29.423017,
@@ -187,9 +194,9 @@
             units: "imperial",
             exclude: "minutely,hourly,alerts"
         }).done(function (results) {
-            console.log(results)
+            //console.log(results)
             results.daily.forEach(function(day, index) {
-                console.log(day);
+                //console.log(day);
                     var date = (new Date(day.dt * 1000)).toDateString();
                     $('#date' + (index + 1)).html(date);
                     $('#sa-temp'  + (index + 1)).html(day.temp.min + "°F / " + day.temp.max + "°F");
@@ -217,9 +224,10 @@
 
         var marker = new mapboxgl.Marker({draggable: true}).setLngLat([-98.4861, 29.4260]).addTo(marcoMap); // Chaining works on multiple lines to help readability
 
+        // Draggable marker below
         function onDragEnd() {
             var lngLat = marker.getLngLat();
-            console.log('Longitude: ' + lngLat.lng + ' Latitude: ' + lngLat.lat);
+            //console.log('Longitude: ' + lngLat.lng + ' Latitude: ' + lngLat.lat);
             $.get("https://api.openweathermap.org/data/2.5/onecall", {
                 appid: OPEN_WEATHER_APPID,
                 lat: lngLat.lat,
@@ -227,9 +235,9 @@
                 units: "imperial",
                 exclude: "minutely,hourly,alerts"
             }).done(function (results) {
-                console.log(results)
+                // console.log(results)
                 results.daily.forEach(function(day, index) {
-                    console.log(day);
+                    //console.log(day);
                     var date = (new Date(day.dt * 1000)).toDateString();
                     $('#date' + (index + 1)).html(date);
                     $('#sa-temp'  + (index + 1)).html(day.temp.min + "°F / " + day.temp.max + "°F");
@@ -241,19 +249,44 @@
                     var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
                     $('#wicon' + (index + 1)).attr('src', iconurl);
                 })
-            });
+            })
         }
 
         marker.on('dragend', onDragEnd);
 
 
 
-        function searchAddress() {}
 
+        // Working search bar below
+        $('#submit-search-address').click(function (e) {
+            var address = $('#search-address').val();
+            geocode(address, mapBoxToken).then(function (results) {
+                $.get("https://api.openweathermap.org/data/2.5/onecall", {
+                    appid: OPEN_WEATHER_APPID,
+                    lat: results[1],
+                    lon: results[0],
+                    units: "imperial",
+                    exclude: "minutely,hourly,alerts"
+                }).done(function (results) {
+                    // console.log(results)
+                    $('#city-displayed').html(address);
+                    results.daily.forEach(function (day, index) {
+                        //console.log(day);
+                        var date = (new Date(day.dt * 1000)).toDateString();
+                        $('#date' + (index + 1)).html(date);
+                        $('#sa-temp' + (index + 1)).html(day.temp.min + "°F / " + day.temp.max + "°F");
+                        $('#sa-humidity' + (index + 1)).html("Humidity: " + day.humidity + "%");
+                        $('#description' + (index + 1)).html("Description: " + day.weather[0].description);
+                        $('#sa-wind' + (index + 1)).html("Wind: " + day.wind_speed + " mph");
+                        $('#sa-pressure' + (index + 1)).html("Pressure: " + day.pressure + " mb");
+                        var iconcode = day.weather[0].icon;
+                        var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+                        $('#wicon' + (index + 1)).attr('src', iconurl);
+                    })
 
-
-
-
+                })
+            })
+        });
 
     });
 
