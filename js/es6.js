@@ -60,22 +60,23 @@ let emails = [];
 let names = [];
 
 // TODO: rewrite the following using arrow functions
-// users.forEach(function(user) {
-//   return emails.push(user.email);
-// });
-// users.forEach(function(user) {
-//   return names.push(user.name);
-// });
+users.forEach((user) => {
+  return emails.push(user.email);
+});
+users.forEach((user) => {
+  return names.push(user.name);
+});
 
-for (let user of users) {
-  emails.push(user.email)
-}
-//console.log(emails);
+// for (let user of users) {
+//   emails.push(user.email)
+// }
 
-for (let user of users) {
-  names.push(user.name);
-}
-//console.log(names);
+console.log(emails);
+
+// for (let user of users) {
+//   names.push(user.name);
+// }
+console.log(names);
 
 // TODO: replace `var` with `let` in the following declaration
 let developers = [];
