@@ -17,7 +17,7 @@ let isCute = true;
 // 	dogName: dogName,
 // 	isCute: isCute
 // }
-//
+
 // console.log(oldDog);
 
 
@@ -32,7 +32,7 @@ let newDog = {
 }
 
 
-//console.log(newDog);
+console.log(newDog);
 
 
 
@@ -55,13 +55,13 @@ var personA = {
 //
 //
 // console.log(name); // 'codeup'
-// console.log(age); // 4
+// console.log(age); // 7
 
 
 //TODO TOGETHER: REFACTOR the above approach using ES6
 
-
-
+// const {name, age} = personA;
+//
 // console.log(name);
 // console.log(age);
 
@@ -93,10 +93,13 @@ const pals = {
 //TODO TOGETHER: REFACTOR the above approach using ES6
 //new way
 
-
+// let {dog, cat, mouse} = pals;
+//
+// pals.dog = "Rex"
 // console.log(dog);
 // console.log(cat);
 // console.log(mouse);
+// console.log(pals);
 
 
 /*==============================================*/
@@ -110,10 +113,11 @@ const theFlash = {
     powers: "Super Speed"
 }
 
+let {name, alias, occupation, powers} = theFlash;
 
-
-// console.log(alias);
-// console.log(powers);
+console.log(alias);
+console.log(powers);
+console.log(occupation);
 
 
 /*==============================================*/
@@ -128,7 +132,7 @@ let cats = ["CJ", "Claude", "Max"];
 
 
 //new way
-
+let [cat1, cat2, cat3] = cats;
 
 // console.log(cat1);
 // console.log(cat2);
@@ -147,6 +151,7 @@ const alphabet = ['A', 'B', 'C', 'D', 'E'];
 
 //TODO TOGETHER: new way
 
+// const [a, b, c] = alphabet;
 
 // console.log(a);
 // console.log(b);
@@ -156,20 +161,22 @@ const alphabet = ['A', 'B', 'C', 'D', 'E'];
 
 //TODO TOGETHER: To skip an element...
 
+// const [a, ,c] = alphabet;
 
 // console.log(a);
 // // console.log(b);
 // console.log(c);
-// console.log(d);
+// // console.log(d);
 
 
 //TODO TOGETHER: To get all elements...Spread operator *BONUS
 
+const [a, b, c, ...bleh] = alphabet; // the three dots followed by a variable name stores the rest of the array into that variable name
 
-// console.log(a);
-// console.log(b);
-// console.log(c);
-// console.log(rest);
+console.log(a);
+console.log(b);
+console.log(c);
+console.log(bleh);
 
 
 /*==============================================*/
@@ -177,24 +184,22 @@ const alphabet = ['A', 'B', 'C', 'D', 'E'];
 
 
 //old way
-// function tellMeAbout(person) {
-// 	var name = person.name;
-// 	var age = person.age;
-// 	console.log(name); // 'codeup'
-// 	console.log(age); // 4
-// }
+function tellMeAbout({name, age}) {
+	console.log(name); // 'Douglas'
+	console.log(age); // 38
+}
 
 
 //new way
 
 
 //
-// const person = {
-// 	name: 'Douglas',
-// 	age: 38
-// };
-//
-// tellMeAbout(person);
+const person = {
+	name: 'Douglas',
+	age: 38
+};
+
+tellMeAbout(person);
 
 
 /*==============================================*/
