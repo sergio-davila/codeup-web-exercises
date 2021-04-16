@@ -22,7 +22,7 @@ parentsHome.setPopup(papasPopup);
 
 // Array loop of restaurants
 
-var restaurantArray = [{name: "Olive Garden", address: "13730 San Pedro Ave, San Antonio, TX 78232"}, {name: "Hopdoddy's", address: "1301 N Loop 1604 W #101, San Antonio, TX 78258"}, {name: "Whataburger", address: "11003 NW Military Hwy, San Antonio, TX 78231"}]
+var restaurantArray = [{name: "Olive Garden", address: "13730 San Pedro Ave, San Antonio, TX 78232"}, {name: "Hopdoddy's", address: "1301 N Loop 1604 W #101, San Antonio, TX 78258"}, {name: "Whataburger", address: "11003 NW Military Hwy, San Antonio, TX 78231"}];
 
 restaurantArray.forEach(function(restaurant) {
     geocode(restaurant.address, mapBoxToken).then(function (results) {
