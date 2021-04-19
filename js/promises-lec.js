@@ -4,7 +4,7 @@
  *        USING FETCH WITH PROMISES
  ******************************************** */
 
-//var pokemonAPI = fetch('https://pokeapi.co/api/v2/pokexmon');
+//var pokemonAPI = fetch('https://pokeapi.co/api/v2/pokemon');
 // return of fetch request is a Promise object
 
 //TODO: console log the results of the above Promise. What is the result?
@@ -36,17 +36,26 @@
 //  the first returned response.
 //    Taking a look at this second return, what are the results? What is the shape of our data?
 
-var pokemonAPI = fetch('https://pokeapi.co/api/v2/pokexmon').then((response) => {
-    return response.json()
-}).then((jsonData) => {
-    console.log(jsonData)
-});
+// var pokemonAPI = fetch('https://pokeapi.co/api/v2/pokemon').then((response) => {
+//     return response.json()
+// }).then((jsonData) => {
+//     return jsonData.results
+// }).then((results) => results.forEach(result=>console.log(result.name)));
 
 // TODO: Finally, chain another .then method that would log all of the name properties of the
 //  returned pokemon.
 // BONUS: Is there a way for us to clean up our code?
 
-// Let's try working with the Star Wars API!
+// let starWarsAPI = fetch("https://swapi.dev/api/films").then(response => {
+//     return response.json();
+// }).then(jsonData => {
+//     console.log(jsonData);
+//     return jsonData.results;
+// }).then((results) => {
+//     results.forEach((film) => console.log(`${film.title} ${film.episode_id}`))
+// });
+// // Let's try working with the Star Wars API!
+// console.log('starWarsAPI Promise', starWarsAPI)
 
 // TODO: Using Promises, make a fetch request to the Star Wars API
 
@@ -55,3 +64,12 @@ var pokemonAPI = fetch('https://pokeapi.co/api/v2/pokexmon').then((response) => 
 // TODO: chain another method that iterates through the results array and console logs the names
 
 // TODO: Demonstrate Promise.all and Promise.race
+var pokemonAPI = fetch('https://pokeapi.co/api/v2/pokemon')
+let starWarsAPI = fetch("https://swapi.dev/api/films")
+// Promise.all([starWarsAPI, pokemonAPI]).then((responses) => {
+//     console.log(responses);
+// })
+
+Promise.race([starWarsAPI, pokemonAPI]).then((response) => {
+    console.log(response)
+})
