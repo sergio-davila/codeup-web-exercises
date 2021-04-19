@@ -80,6 +80,8 @@ let nameString = users.reduce((accumulation, user, index) => {
     // Trying to get the final index of the array
     if (users.length - 1 === index) {
         return `${accumulation}${user.name}`
+    } else if (index === 0) {
+        return `Your instructors are: ${accumulation}${user.name}`
     } else {
         return `${accumulation}${user.name}, `
     }
