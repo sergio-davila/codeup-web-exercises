@@ -32,7 +32,7 @@
 
   //TODO Together: Now that we've seen an example of how our request looks in the console, let's try it on something that's a live API ready to interact with:
 
-  const dreamAPIURL = "https://watery-hammerhead-bay.glitch.me/" // our base URL for our API
+  const dreamAPIURL = "https://boom-shade-muscle.glitch.me/" // our base URL for our API
   // /dreams = our route
 
   //TODO Together: As you can see, we've set up a little area for a user to send us a dream of some kind. A dream is an object that is comprised of one main 'dream' property and then an id (which is being dealt with automatically at this point behind the scenes): {"dream":"dreamValue", "id": numValue}
@@ -40,12 +40,12 @@
 
   //TODO Together: First, how can we fetch all of the dreams?
 
-  const dreamApiURL = "https://watery-hammerhead-bay.glitch.me/dreams";
+  const dreamApiURL = "https://boom-shade-muscle.glitch.me/dreams";
   // const route = "/dreams";
 
   //TODO Together: Now that we've gotten a list of what is over in our DREAMSApi, our next thing to attempt is to send some fresh data (a dream) up into it! I'll build a dream object to send over - I'll need to remember to program both a 'what' to send and then a 'how' (with the method, content-type, and body options) to have a complete looking POST request to send over.
 
-  // let dreamObj = {"dream": "My dream is to work at Nintendo as a developer or something"}
+  // let dreamObj = {"dream": "My dream is to have something reeeeally good for lunch"}
   //
   // let options = {
   //     method: "POST",
@@ -54,7 +54,7 @@
   //     },
   //     body: JSON.stringify(dreamObj)
   // }
-
+  //
   // fetch(dreamApiURL, options).then(function(response) {
   //     console.log(response)
   // })
@@ -67,20 +67,20 @@
 
   //TODO Together: Let's target a specific ID by url (e.g. "/dreams/2" for the dream with an ID of '2') and update that resource found at that url with an entirely new resource (an {entire: object}) - PUT will let us replace the entire {dream: object} that was found at that url!
 
-//   let putURL = "https://watery-hammerhead-bay.glitch.me/dreams/8"
-//
-//   let newDreamObj = {"dream": "My dream is to work at Nintendo as a developer or something"}
-//   let options2 = {
-//       method: "PUT",
-//       headers: {
-//           'Content-Type': 'application/json',
-//       },
-//       body: JSON.stringify(newDreamObj)
-//   }
-//
-//   fetch(putURL, options2).then(function(response) {
-//       console.log(response)
-//   })
+  let putURL = "https://watery-hammerhead-bay.glitch.me/dreams/47"
+
+  let newDreamObj = {"dream": "My dream is to take a nap later"}
+  let options2 = {
+      method: "PUT",
+      headers: {
+          'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(newDreamObj)
+  }
+
+  fetch(putURL, options2).then(function(response) {
+      console.log(response)
+  })
 
   //TODO Together: Target a specific url and update a specific property within. Instead of sending an entire object over, we send over the piece we want to PATCH! ({targetProperty: patchContents})
 
@@ -108,13 +108,13 @@
 
   //TODO Together: Last, let's look at how we can delete something. We need an /id as usual for this use. Note: This is a permanent deletion without any confirmation message, so make sure you DELETE carefully in the future!
 
-  let deleteMethod = {
-        method: "DELETE"
-  }
-
-  fetch(dreamApiURL + "/8", deleteMethod).then(function (response) {
-      console.log(response)
-  })
+  // let deleteMethod = {
+  //       method: "DELETE"
+  // }
+  //
+  // fetch(dreamApiURL + "/8", deleteMethod).then(function (response) {
+  //     console.log(response)
+  // })
 </script>
 </body>
 </html>
